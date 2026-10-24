@@ -1,0 +1,210 @@
+{
+  "transaction": "bifast",
+  "errorKey": "bifast",
+  "report": [
+    {
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "transactionAmount",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "source": "response",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "41",
+      "source": "response",
+      "value": [
+        {
+          "key": "terminalId"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "source": "response",
+      "value": [
+        {
+          "key": "prvtDestinationName",
+          "length": "70",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtTransactionNote",
+          "length": "105",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtSourceName",
+          "length": "70",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "response",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "source": "response",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "value": [
+        {
+          "key": "prvtPhoneNumber",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "prvtSourceNumber",
+          "length": "18",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtTransferAmount",
+          "length": "18",
+          "leftpad": "0"
+        },
+        {
+          "key": "prvtCashHandling",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "prvtBicCodeSource",
+          "length": "35",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtTransferPurpose",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtBicCodeDestination",
+          "length": "35",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtAccountType",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtNik",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtAddress",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtProvCode",
+          "length": "4",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtCityCode",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtResidentCode",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "prvtCitizenship",
+          "length": "2",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "100",
+      "source": "response",
+      "value": [
+        {
+          "key": "sourceBankCode"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "response",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "103",
+      "source": "response",
+      "value": [
+        {
+          "key": "destinationNumber"
+        }
+      ]
+    },
+    {
+      "bit": "125",
+      "source": "response",
+      "value": [
+        {
+          "key": "transferIndicator"
+        }
+      ]
+    },
+    {
+      "bit": "127",
+      "source": "response",
+      "value": [
+        {
+          "key": "destinationBankCode"
+        }
+      ]
+    }
+  ]
+}

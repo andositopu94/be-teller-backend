@@ -1,0 +1,1 @@
+create or replace view Jurusan_Pendidikan as select a.id, b.kode_instansi, b.nama_instansi, a.kode_jurusan, a.nama_jurusan, a.created_at, a.updated_at, a.pendidikan_id from jurusan a join pendidikan b on a.pendidikan_id=b.id;

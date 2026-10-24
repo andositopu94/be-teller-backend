@@ -1,0 +1,329 @@
+{
+  "pcode": "500000",
+  "routing": "07019",
+  "errorKey": "bpjsKerjaBpu",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "dataParameter",
+          "length": "156",
+          "leftpad": " "
+
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "58",
+      "value": [
+        {
+          "key": "checkNumber",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "checkPageNumber",
+          "length": "10",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "nik",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "progMonth",
+          "length": "2",
+          "leftpad": " "
+        },
+        {
+          "key": "kodeIuran",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "fullName",
+          "length": "100",
+          "rightpad": " "
+        },
+        {
+          "key": "branchName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "efectiveDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "expiredDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "billJkk",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJkm",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJht",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJpk",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJpn",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "totalBill",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "totalAmount",
+          "length": "20",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "dataParameter"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "nik",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "progMonth",
+          "length": "2",
+          "leftpad": " "
+        },
+        {
+          "key": "kodeIuran",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "fullName",
+          "length": "100",
+          "rightpad": " "
+        },
+        {
+          "key": "branchName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "efectiveDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "expiredDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "billJkk",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJkm",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJht",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJpk",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJpn",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "totalBill",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "totalAmount",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "bankBranch",
+          "length": "50",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

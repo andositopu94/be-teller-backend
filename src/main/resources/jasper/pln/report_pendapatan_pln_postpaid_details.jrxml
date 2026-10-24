@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_pendapatan_pln_prepaid" pageWidth="915" pageHeight="842" columnWidth="875" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="1791c43e-5f4a-41de-b794-4439f3101adf">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="kodeCabang" class="java.lang.String">
+		<fieldDescription><![CDATA[kodeCabang]]></fieldDescription>
+	</field>
+	<field name="transaksiStatus" class="java.lang.String">
+		<fieldDescription><![CDATA[transaksiStatus]]></fieldDescription>
+	</field>
+	<field name="jasperLocation" class="java.lang.String">
+		<fieldDescription><![CDATA[jasperLocation]]></fieldDescription>
+	</field>
+	<field name="details" class="java.util.List">
+		<fieldDescription><![CDATA[details]]></fieldDescription>
+	</field>
+	<variable name="jumlahTotal" class="java.math.BigDecimal" calculation="Sum"/>
+	<variable name="dendaTotal" class="java.math.BigDecimal" calculation="Sum"/>
+	<variable name="biayaTotal" class="java.math.BigDecimal" calculation="Sum"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="875" height="20" uuid="8a7a105b-ff81-479a-b2fa-6b99fc0dd752">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Transaksi : " + $F{transaksiStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="20" height="30" uuid="98835659-f3cf-4cf4-8634-96db85065ad0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="120" height="30" uuid="478fb372-77be-41ac-9e9d-4e304334f623">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NAMA PELANGGAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="105" height="30" uuid="e0ca6db4-377d-407c-a510-223017f8874b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ID PELANGGAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="0" width="44" height="30" uuid="d4d6be62-83a9-4cad-aa51-f04a0c2a2397">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PERIODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="0" width="100" height="30" uuid="7176ba05-7e7e-42d9-a16f-081804c20431">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TANGGAL BAYAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="464" y="0" width="75" height="30" uuid="614586e4-19ee-41b1-8c5a-be678abae10f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DENDA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="614" y="0" width="75" height="30" uuid="0e9d3983-8fd6-40c6-b2ea-612d3f5820d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="689" y="0" width="75" height="30" uuid="f703e825-929c-4155-955e-c85f9dc086b3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NOMOR ARSIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="824" y="0" width="51" height="30" uuid="d6695bd6-1e47-4a01-a1fd-ce2586573329"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CHANNEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="764" y="0" width="60" height="30" uuid="88adf5d9-cb52-4a97-836c-4ed6820483b2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[USER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="0" width="75" height="30" uuid="20a72f1a-5010-408e-bfe7-c98a45766c5c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[JUMLAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="539" y="0" width="75" height="30" uuid="f478862f-4ad8-406b-8816-65e278daea55">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[BIAYA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="875" height="20" isRemoveLineWhenBlank="true" uuid="83fd6533-8486-41ba-aa57-c0b19cb54e77">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="33d5727d-2e78-48c4-8262-52dcb87f111d"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[!$F{details}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Kode Cabang : "+$F{kodeCabang}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="-20" y="20" width="915" height="50" isRemoveLineWhenBlank="true" uuid="d2fbf23b-d6be-4965-9e1e-6230071f2213">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource
+                  ($F{details})]]></dataSourceExpression>
+				<returnValue subreportVariable="subTotalJumlah" toVariable="jumlahTotal" calculation="Sum"/>
+				<returnValue subreportVariable="subTotalDenda" toVariable="dendaTotal" calculation="Sum"/>
+				<returnValue subreportVariable="subTotalBiaya" toVariable="biayaTotal" calculation="Sum"/>
+				<subreportExpression><![CDATA[$F{jasperLocation}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="389" height="20" uuid="26655ec8-5b8c-4315-bbd0-35900b5bc377"/>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="389" y="0" width="75" height="20" uuid="388ff022-66e1-4fcc-9aad-fe212ed58dca"/>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jumlahTotal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="464" y="0" width="75" height="20" uuid="142e3995-6d53-453f-b76c-29b3e0ff3820"/>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{dendaTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="689" y="0" width="186" height="20" uuid="45b17585-f651-4ea2-b47c-9db0d511a1d7"/>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="539" y="0" width="75" height="20" uuid="dd60bbb1-0fa6-4d85-9bc4-1c8f07e96e75"/>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{biayaTotal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="614" y="0" width="75" height="20" uuid="a55636f9-4990-4956-b7e9-b0a973910afa"/>
+				<box padding="2">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{jumlahTotal}.add($V{dendaTotal}.add( $V{biayaTotal} ) )]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

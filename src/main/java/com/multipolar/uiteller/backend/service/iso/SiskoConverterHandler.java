@@ -1,0 +1,209 @@
+	package com.multipolar.uiteller.backend.service.iso;
+
+	import com.fasterxml.jackson.databind.JsonMappingException;
+	import com.fasterxml.jackson.databind.ObjectMapper;
+	import com.multipolar.uiteller.backend.model.converter.ConverterRule;
+	import com.multipolar.uiteller.backend.model.converter.RequestRule;
+	import com.multipolar.uiteller.backend.model.converter.Rule;
+	import com.multipolar.uiteller.backend.model.converter.SiskoRule;
+	import com.multipolar.uiteller.backend.resource.Constants;
+	import com.multipolar.uiteller.backend.security.model.UserDetailImpl;
+	import com.multipolar.uiteller.backend.servletfilter.FeatureContextHolder;
+	import org.apache.commons.lang3.StringUtils;
+	import org.jpos.iso.ISOException;
+	import org.jpos.iso.ISOMsg;
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
+	import org.springframework.core.io.ClassPathResource;
+	import org.springframework.core.io.Resource;
+	import org.springframework.security.core.context.SecurityContextHolder;
+	import org.springframework.stereotype.Service;
+
+	import java.io.FileNotFoundException;
+	import java.io.IOException;
+	import java.text.SimpleDateFormat;
+	import java.util.*;
+
+	@Service
+	public class SiskoConverterHandler extends DefaultConverterHandler {
+
+		private static final String RULE_EXTENSION = ".rule.json";
+		private static final SimpleDateFormat LOCAL_DATE = new SimpleDateFormat("yyMMdd");
+		private static final SimpleDateFormat DATE_TIME = new SimpleDateFormat("dd/MM/yyyy kk:mm:ss");
+		private static final SimpleDateFormat LOCAL_TIME = new SimpleDateFormat("kk:mm:ss");
+		private static final SimpleDateFormat SDATE = new SimpleDateFormat("dd/MM/yyyy");
+		private static final SimpleDateFormat MONTH = new SimpleDateFormat("MM");
+		private static final SimpleDateFormat DATE = new SimpleDateFormat("dd");
+		private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("MMddkkmmss");
+		private static Logger logger = LoggerFactory.getLogger(SiskoConverterHandler.class);
+		private static final String SUPPORTED_URL_INITIAL = "bpihinitial";
+		private static final String SUPPORTED_URL_PAYMENT = "bpihPayment";
+		private static final String SUPPORTED_URL_PAYMENT_INQ = "bpihPaymentInquiry";
+		private static final String defaultMTI = "0200";
+		private static final String defaultAcquirer = "117";
+		private static final Map<String, String> MAP = new HashMap<String, String>(){
+			{ put("01", "1"); put("02", "2"); put("03", "3"); put("04", "4"); put("05", "5"); put("06", "6"); put("07", "7"); put("08", "8"); put("09", "9"); put("10", "A"); put("11", "B"); put("12", "C"); }
+		};
+
+		@Override
+		public boolean supports(String s) {
+			return StringUtils.equals(SUPPORTED_URL_INITIAL, s) || StringUtils.equals(SUPPORTED_URL_PAYMENT, s) || StringUtils.equals(SUPPORTED_URL_PAYMENT_INQ, s);
+		}
+
+		@Override
+		public ISOMsg doConvertToISO(Map<String, Object> map) throws InvalidMessageException {
+			Date date = new Date();
+			FeatureContextHolder.getContext().setFeatureTransactionDate(date);
+			try {
+				ISOMsg msg = new ISOMsg();
+				setMti(msg, defaultMTI);
+				setTransmissionDateTime(msg, date);
+				setTransmissionTime(msg, date);
+				setTransmissionDate(msg, date);
+				setSettlementDate(msg, date);
+				setMerchantType(msg, Constants.MERCHANT_TYPE);
+				setAcquirer(msg, defaultAcquirer);
+				setTraceAuditNumber(msg);
+				setTerminal(msg);
+				setPrivateMessage(msg, map);
+				return msg;
+			} catch (ISOException ex) {
+				throw new InvalidMessageException(ex.getMessage());
+			}
+		}
+
+		@Override
+		protected void setSettlementDate(ISOMsg msg, Date date) throws ISOException {
+			Calendar calendar = Calendar.getInstance();
+			if(date.after(date())){
+				calendar.setTime(date);
+				calendar.add(Calendar.DATE, Constants.MPN_INCREMENT_DATE);
+				date = calendar.getTime();
+			}
+			FeatureContextHolder.getContext().setSettlementDate(date);
+			msg.set(15, LOCAL_DATE.format(date));
+		}
+
+		protected SiskoRule getSiskoRule() throws IOException {
+			String feature = FeatureContextHolder.getContext().getFeatureName();
+			String filename = feature + RULE_EXTENSION;
+
+			ObjectMapper objectMapper = new ObjectMapper();
+
+			Resource resource = new ClassPathResource("rules/" + filename);
+
+			return objectMapper.readValue(resource.getInputStream(), SiskoRule.class);
+		}
+
+		public Date date(){
+			Calendar calendar = Calendar.getInstance();
+			calendar.setTime(new Date());
+			calendar.set(Calendar.HOUR_OF_DAY, Constants.MPN_SETTLEMENT_DATE);
+			calendar.set(Calendar.MINUTE, 0);
+			calendar.set(Calendar.SECOND, 0);
+			calendar.set(Calendar.MILLISECOND, 0);
+			return calendar.getTime();
+		}
+
+		@Override
+		protected void setTransmissionDate(ISOMsg msg, Date date) throws ISOException {
+			msg.set(13, LOCAL_DATE.format(date));
+		}
+
+		@Override
+		protected Map<String, Object> translatePrivateMessage(ISOMsg msg, boolean fl) throws ISOException {
+			Map<String, Object> map = new HashMap<String, Object>();
+			try {
+				Rule rule = getRule();
+
+				String errorKey = rule.getErrorKey();
+				if (exception(msg, map, errorKey))
+					return map;
+
+				RequestRule[] responseRules = rule.getResponse();
+				for (RequestRule responseRule : responseRules) {
+					int bit = responseRule.getBit();
+					String valueFromBit = msg.getString(bit);
+					if (valueFromBit == null) {
+						logger.error("Value get from bit is null, bit = " + bit);
+						throw new ISOException("The rule said get value from bit but empty bit is found. bit " + bit);
+					}
+
+					ConverterRule[] values = responseRule.getValue();
+					setValueForMap(map, valueFromBit, values);
+				}
+			} catch (FileNotFoundException fnfe) {
+				fnfe.printStackTrace();
+				return generalFail();
+			} catch (JsonMappingException jme) {
+				logger.error("Can't parsing rule file, please validate the json format");
+				jme.printStackTrace();
+				return generalFail();
+			} catch (IOException iox) {
+				logger.error(iox.getMessage());
+				iox.printStackTrace();
+				return generalFail();
+			}
+
+			UserDetailImpl userDetail = (UserDetailImpl) SecurityContextHolder.getContext().getAuthentication().getDetails();
+			map.put("sourceName", map.get("jemaahName"));
+			map.put("userId", userDetail.getUsername());
+			map.put("branchCode", userDetail.getBranchCode());
+			map.put("branchName", userDetail.getBranchName());
+			map.put("archiveNumber", userDetail.getUsername() + FeatureContextHolder.getContext().getTraceNumber());
+			map.put("transactionDate", DATE_TIME.format(FeatureContextHolder.getContext().getFeatureTransactionDate()));
+			map.put("transactionTime", LOCAL_TIME.format(FeatureContextHolder.getContext().getFeatureTransactionDate()));
+			map.put("settlementDate", SDATE.format(FeatureContextHolder.getContext().getSettlementDate()));
+			Map<String, String> statusMap = new HashMap<String, String>();
+			statusMap.put("status", "00");
+			statusMap.put("code", "00");
+			statusMap.put("message", "Request Success");
+			map.put("status", statusMap);
+
+			return map;
+		}
+
+		@Override
+		protected void setPrivateMessage(ISOMsg msg, Map<String, Object> map) throws ISOException {
+			try {
+				SiskoRule siskoRule = getSiskoRule();
+				RequestRule[] requestRules = siskoRule.getRequest();
+				for (RequestRule requestRule : requestRules) {
+					int bit = requestRule.getBit();
+					ConverterRule[] values = requestRule.getValue();
+					String valueForBit = getValueForBit(map, bit, values);
+					msg.set(bit, valueForBit);
+				}
+				msg.set(3, siskoRule.getPcode());
+				if(StringUtils.equals(siskoRule.getPcode(), Constants.SISKO_CODE_INQUIRY_PAYMENT))
+					msg.set(37, defaultAcquirer+MAP.get(MONTH.format(FeatureContextHolder.getContext().getFeatureTransactionDate()))+DATE.format(FeatureContextHolder.getContext().getFeatureTransactionDate())+FeatureContextHolder.getContext().getTraceNumber());
+			} catch (FileNotFoundException fnfe) {
+				fnfe.printStackTrace();
+			} catch (JsonMappingException jme) {
+				logger.error("Can't parsing rule file, please validate the json format");
+				jme.printStackTrace();
+			} catch (IOException iox) {
+				logger.error(iox.getMessage());
+				iox.printStackTrace();
+			}
+		}
+
+		protected void setTerminal(ISOMsg msg) throws ISOException {
+			UserDetailImpl details = getUserDetails();
+			String branchId = details.getBranchCode();
+			String userid = SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString();
+
+			msg.set(41, StringUtils.rightPad(branchId + userid, 16));
+		}
+
+		private UserDetailImpl getUserDetails() {
+			UserDetailImpl userDetail = (UserDetailImpl) SecurityContextHolder.getContext().getAuthentication().getDetails();
+			return userDetail;
+		}
+
+		@Override
+		protected void setTransmissionDateTime(ISOMsg msg, Date date) throws ISOException {
+			DATE_FORMAT.setTimeZone(TimeZone.getTimeZone(Constants.TIME_ZONE_MST));
+			msg.set(7, DATE_FORMAT.format(FeatureContextHolder.getContext().getFeatureTransactionDate()));
+		}
+	}

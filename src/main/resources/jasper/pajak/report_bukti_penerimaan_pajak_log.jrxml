@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_bukti_penerimaan_pajak_log" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1232eb34-df3f-4053-b1eb-79a016b464ac">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="tanggalBayar" class="java.util.Date"/>
+	<parameter name="tanggalBuku" class="java.util.Date"/>
+	<parameter name="kodeCabang" class="java.lang.String"/>
+	<parameter name="nomorArsip" class="java.lang.String"/>
+	<parameter name="kodeBilling" class="java.lang.String"/>
+	<parameter name="nomorRekening" class="java.lang.String"/>
+	<parameter name="bebanRekening" class="java.lang.String"/>
+	<parameter name="jumlahSetoran" class="java.math.BigDecimal"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="286" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="30" uuid="f7860106-f099-4435-9e6d-f698d79129db"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[DATEFORMAT($P{tanggalBayar},"dd/MM/yyyy")+", " + DATEFORMAT($P{tanggalBuku}, "dd/MM/yyyy HH:mm:ss")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="555" height="30" uuid="1d40dbb2-9422-4310-a97d-3d5491e19ccf"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["KdCab : "+ $P{kodeCabang} + ", NoArsip : "+ $P{nomorArsip} + ", KdBilling : "+$P{kodeBilling}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="555" height="30" uuid="1f000c9b-f297-48de-8bca-5964b259c743"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["NoRek : "+$P{nomorRekening} + ", JumlahTx : " + TEXT($P{jumlahSetoran} , "#,##0.###") + " K"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="90" width="555" height="30" uuid="0d8ca240-5211-41c5-9548-ad7280ca8b57"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["BebenRek : "+ $P{bebanRekening} +", JumlahTx : "+ TEXT($P{jumlahSetoran} , "#,##0.###") + " D"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

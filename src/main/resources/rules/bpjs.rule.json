@@ -1,0 +1,655 @@
+{
+  "pcode": "500000",
+  "routing": "03018",
+  "errorKey": "bpjs",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "customerId",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "monthNumber",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "phoneNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "membersCount",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo1",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode1",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName1",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName1",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance1",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill1",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo2",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode2",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName2",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName2",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance2",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill2",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo3",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode3",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName3",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName3",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance3",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill3",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo4",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode4",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName4",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName4",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance4",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill4",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo5",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode5",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName5",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName5",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance5",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill5",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo6",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode6",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName6",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName6",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance6",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill6",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo7",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode7",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName7",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName7",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance7",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill7",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "balancesTotal",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "billsTotal",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "referenceNumber",
+          "length": "32",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "customerId",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "monthNumber",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "phoneNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "membersCount",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo1",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode1",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName1",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName1",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance1",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill1",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo2",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode2",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName2",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName2",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance2",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill2",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo3",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode3",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName3",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName3",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance3",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill3",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo4",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode4",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName4",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName4",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance4",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill4",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo5",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode5",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName5",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName5",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance5",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill5",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo6",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode6",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName6",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName6",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance6",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill6",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberNo7",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchCode7",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBranchName7",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "memberName7",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "memberBalance7",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "memberBill7",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "balancesTotal",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "billsTotal",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "referenceNumber",
+          "length": "32",
+          "leftpad": " "
+        },
+        {
+          "key": "transactionId",
+          "length": "32",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "pcode": "380000",
+  "routing": "03011",
+  "errorKey": "inquiryPbb",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "mataUang",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "58",
+      "value": [
+        {
+          "key": "checkNumber",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "checkPageNumber",
+          "length": "10",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "noSts",
+          "length": "21",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "rekeningSumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "total",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "mataUang",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "noSts",
+          "length": "21",
+          "rightpad": " "
+        },
+        {
+          "key": "noWp",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "namaWp",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "alamat",
+          "length": "45",
+          "rightpad": " "
+        },
+        {
+          "key": "mataAnggaran",
+          "length": "9",
+          "rightpad": " "
+        },
+        {
+          "key": "uraian",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "masaPajak",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "noSKP",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "jumlahPokok",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "denda",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "62",
+      "value": [
+        {
+          "key": "pemko"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "rekeningSumber"
+        }
+      ]
+    },
+    {
+      "bit": "103",
+      "value": [
+        {
+          "key": "rekeningTujuan"
+        }
+      ]
+    }
+  ]
+}

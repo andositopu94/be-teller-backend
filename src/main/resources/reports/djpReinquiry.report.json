@@ -1,0 +1,126 @@
+{
+  "transaction": "djpReinquiry",
+  "errorKey": "djp",
+  "report": [
+    {
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "response",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "source": "response",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "value": [
+        {
+          "other": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "billingCode",
+          "length": "15"
+        },
+        {
+          "key": "taxNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "taxName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "taxAddress",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "account",
+          "length": "6",
+          "rightpad": " "
+        },
+        {
+          "key": "depositCode",
+          "length": "3"
+        },
+        {
+          "key": "taxPeriod",
+          "length": "8"
+        },
+        {
+          "key": "skNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "nop",
+          "length": "18"
+        },
+        {
+          "key": "ntpn",
+          "length": "16"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "response",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "12",
+      "source": "response",
+      "value": [
+        {
+          "key": "transactionTime"
+        }
+      ]
+    }
+  ]
+}

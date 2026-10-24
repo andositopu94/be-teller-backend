@@ -1,0 +1,202 @@
+{
+  "pcode": "380000",
+  "routing": "03002",
+  "errorKey": "inquirySpeedy",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "13",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "divreCode",
+          "length": "2"
+        },
+        {
+          "key": "datelCode",
+          "length": "4"
+        },
+        {
+          "key": "billNumber",
+          "length": "1"
+        },
+        {
+          "key": "billReferenceThree",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueThree",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "billReferenceTwo",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueTwo",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "billReferenceOne",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueOne",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "taxNumber",
+          "length": "15",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "pcode": "320000",
+  "errorKey": "bpihintial",
+  "request": [
+    {
+      "bit": "2",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "13",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "32",
+      "value": [
+        {
+          "other": "117"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "jemaahType",
+          "length": "1",
+          "rightpad": " "
+        },
+        {
+          "key": "ktp",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "placeBirth",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "dateBirth",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "gender",
+          "length": "1",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "postCode",
+          "length": "5",
+          "leftpad": "0"
+        },
+        {
+          "key": "villageName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "districtName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "subdistrictName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "provinceCityCode",
+          "length": "4"
+        },
+        {
+          "key": "workCode",
+          "length": "1",
+          "leftpad": "0"
+        },
+        {
+          "key": "educationCode",
+          "length": "1",
+          "leftpad": "0"
+        },
+        {
+          "key": "marriagenCode",
+          "length": "1",
+          "leftpad": "0"
+        },
+        {
+          "key": "fatherName",
+          "length": "40",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "63",
+      "value": [
+        {
+          "key": "branchCode",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "2",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "13",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "41",
+      "value": [
+        {
+          "key": "terminalId"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "jemaahType",
+          "length": "1",
+          "rightpad": " "
+        },
+        {
+          "key": "ktp",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "placeBirth",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "dateBirth",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "gender",
+          "length": "1",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "postCode",
+          "length": "5",
+          "leftpad": "0"
+        },
+        {
+          "key": "villageName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "districtName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "subdistrictName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "provinceCityCode",
+          "length": "4"
+        },
+        {
+          "key": "workCode",
+          "length": "1",
+          "leftpad": "0"
+        },
+        {
+          "key": "educationCode",
+          "length": "1",
+          "leftpad": "0"
+        },
+        {
+          "key": "marriagenCode",
+          "length": "1",
+          "leftpad": "0"
+        },
+        {
+          "key": "fatherName",
+          "length": "40",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "62",
+      "value": [
+        {
+          "key": "validationNumber",
+          "length": "20"
+        },
+        {
+          "key": "jemaahNameSecond",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "ktpNumberSecond",
+          "length": "20"
+        },
+        {
+          "key": "addressSecond",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "departingYear",
+          "length": "4"
+        },
+        {
+          "key": "embartion",
+          "length": "3"
+        },
+        {
+          "key": "cloter",
+          "length": "3"
+        },
+        {
+          "key": "virtualAccount",
+          "length": "25"
+        }
+      ]
+    }
+  ]
+}

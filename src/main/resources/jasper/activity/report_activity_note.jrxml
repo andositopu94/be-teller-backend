@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_bukti_setoran_pelunasan_bpih" pageWidth="595" pageHeight="420" orientation="Landscape" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="1f99aee1-34fd-4714-8026-082858c7c9da">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<parameter name="creditSource" class="java.lang.String"/>
+	<parameter name="creditNominal" class="java.math.BigDecimal"/>
+	<parameter name="spell" class="java.lang.String"/>
+	<parameter name="description" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<parameter name="transactionDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="147" y="0" width="260" height="30" uuid="07232e28-5383-45a0-8c68-2a1e54ff4cd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KUITANSI TRANSAKSI TUNAI PAYMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="00bf77b5-bba2-4366-993b-a1da7611dc80"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[BON KREDIT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="130" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="0258b9eb-413a-472d-93c0-f924d047b5d1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Cabang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="8ec9da06-d395-4007-b26f-d3d104c779ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Rupiah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="3402992c-c2fa-4b6c-9dda-67f9baa9d6f8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Terbilang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="80" height="20" uuid="b1a7b34e-f380-48e8-945c-b18a7e7094eb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[User]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="105" width="555" height="1" uuid="c3191124-cf84-4d4f-91b2-6dc250e8b647">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="180" height="20" uuid="7012da97-81a1-4a5a-9e74-a221c11def69"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{branchName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="130" y="40" width="150" height="20" uuid="bc85264d-9948-4c87-a550-4efd809e8258"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{creditNominal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="60" width="455" height="20" uuid="99ab9a2a-738c-4321-808e-34ad05a717da"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{spell}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="80" width="455" height="20" uuid="c2956b34-39a6-491d-a67c-3b7a8d03d75f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{description}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="0" width="165" height="20" uuid="45f79003-beac-4f13-acd1-81c3067e9154"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="20" width="80" height="20" uuid="0b54a049-039a-4814-af43-0f7d6796d9fe"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="20" width="165" height="20" uuid="766c03a3-86ac-4b16-a993-a88f4c31b1a2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{transactionDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="110" width="555" height="20" uuid="bfdf79a9-8771-4204-872d-197fed51a9c2">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Dokumen ini dicetak secara elektronik dan merupakan hasil atas transaksi yang dilakukan oleh petugas yang bersangkutan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="20" uuid="b6534b35-3927-426d-8028-f1d7c10b4f0b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="612c1253-eacf-443a-a4c7-14d98823d59e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kredit]]></text>
+			</staticText>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="100" y="20" width="180" height="20" uuid="303fd05d-0683-4d02-8fa9-5b2bd8eef6cc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{creditSource}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="40" width="30" height="20" uuid="468f92a6-e6b7-4df6-b60c-ea94232acbe0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[IDR]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageFooter>
+</jasperReport>

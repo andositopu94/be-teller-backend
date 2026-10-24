@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2021-11-09T12:44:03 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_bukti_setoran_pelunasan_bpih" pageWidth="595" pageHeight="460" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f99aee1-34fd-4714-8026-082858c7c9da">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="tanggalTransaksi" class="java.lang.String"/>
+	<parameter name="kodeBankBPS" class="java.lang.String"/>
+	<parameter name="kodeCabangBPS" class="java.lang.String"/>
+	<parameter name="nomorTransaksi" class="java.lang.String"/>
+	<parameter name="channel" class="java.lang.String"/>
+	<parameter name="jamTransaksi" class="java.lang.String"/>
+	<parameter name="nomorTerminal" class="java.lang.String"/>
+	<parameter name="nomorRekening" class="java.lang.String"/>
+	<parameter name="namaRekening" class="java.lang.String"/>
+	<parameter name="kodeMataUang" class="java.lang.String"/>
+	<parameter name="nomorValidasi" class="java.lang.String"/>
+	<parameter name="namaCalonHaji" class="java.lang.String"/>
+	<parameter name="nilaiSetoran" class="java.math.BigDecimal"/>
+	<parameter name="terbilang" class="java.lang.String"/>
+	<parameter name="message" class="java.lang.String"/>
+	<parameter name="noKtp" class="java.lang.String"/>
+	<parameter name="nomorVirtualAccount" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<image scaleImage="RetainShape">
+				<reportElement x="0" y="0" width="150" height="59" uuid="6035671b-35a3-4c6c-9982-9a6a9be1832e"/>
+				<imageExpression><![CDATA["jasper/bpih/logo_bank_bpd_sumut-min.svg"]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape">
+				<reportElement x="490" y="0" width="63" height="59" uuid="fa4d6136-18e9-4cc1-903e-09d9942ed939"/>
+				<imageExpression><![CDATA["jasper/bpih/Kementerian_Agama_new_logo-min.svg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="180" y="30" width="200" height="30" uuid="07232e28-5383-45a0-8c68-2a1e54ff4cd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Setoran Awal Bipih]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="250" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="90" width="130" height="20" uuid="0258b9eb-413a-472d-93c0-f924d047b5d1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="130" height="20" uuid="01a9c734-7313-4272-9013-2d1e327c9fe8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nomor Referensi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="130" height="20" uuid="8ec9da06-d395-4007-b26f-d3d104c779ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nomor Virtual Account]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="110" width="130" height="20" uuid="844958f8-2a11-40ea-b3ae-b10d97e47c7f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Rekening]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="130" height="20" uuid="c98b62e6-bacb-44c7-8e1c-55288377b5c0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nomor KTP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="130" height="20" uuid="3599d05e-d02a-484e-bbb6-24b4228ad6b5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nomor Validasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="130" height="20" uuid="aee67c69-8000-497e-abcb-e6d11da159e5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Jemaah Haji]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="170" width="130" height="20" uuid="c3acae67-94cc-4b14-b400-e47815937cfc"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="130" height="20" uuid="dd53ce52-aeef-43c1-b0e5-953bba700985"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Terbilang]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="90" width="180" height="20" uuid="7012da97-81a1-4a5a-9e74-a221c11def69"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tanggalTransaksi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="50" width="180" height="20" uuid="018a0b17-50fb-498b-b37b-7ab02d24d254"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorTransaksi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="110" width="180" height="20" uuid="8d30faa5-32cd-4dca-831c-be81def2fcd2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorRekening}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="130" width="180" height="20" uuid="25a524ed-a47b-433a-82ec-8d4fa38ee564"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{noKtp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="30" width="180" height="20" uuid="3f92f0fe-577c-439d-9330-c3ca372dd37c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorValidasi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="150" width="180" height="20" uuid="ffadc905-ab96-4206-ab3e-0febd7e95210"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{namaCalonHaji}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="140" y="170" width="180" height="20" uuid="f2f344a8-4dab-4cae-9866-ffc3435e5375"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nilaiSetoran}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="190" width="415" height="20" uuid="b2e94a2b-a5e2-4663-9448-000719b3990e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{terbilang}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="30" width="10" height="20" uuid="2393590c-73e6-4e10-ba80-6229593d1618"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="50" width="10" height="20" uuid="bee33c90-1d1a-40db-9ba5-b70f3c3dd307"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="70" width="10" height="20" uuid="b8b4825e-cc14-4886-9b41-4b4d3173b336"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="90" width="10" height="20" uuid="3e3f4559-caba-4ed0-847a-bbba5777e83b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="110" width="10" height="20" uuid="a680085b-82a8-41ad-8a52-9325646af5fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="130" width="10" height="20" uuid="fe111441-6345-495d-865f-681e70c48fc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="150" width="10" height="20" uuid="9f7a1f3e-aebe-4022-b727-9a439fcbc703"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="170" width="10" height="20" uuid="681db737-52a4-47a5-a045-0d279830fabc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="190" width="10" height="20" uuid="d17e4ff6-512a-446f-984d-132cbc997e11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="554" height="30" uuid="33b39e72-b73d-4a6b-ad56-df19a726193b"/>
+				<textElement>
+					<font size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Segera melakukan pendaftaran melalui Kantor Kementrian Agama Kab/Kota sesuai domisili atau aplikasi Haji Pintar]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="160" height="29" uuid="b64c4908-1abd-49f1-8214-d67e7553645d"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+     new com.google.zxing.oned.Code128Writer().encode(
+         $P{nomorValidasi},com.google.zxing.BarcodeFormat.CODE_128,120,39))]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="140" y="70" width="180" height="20" uuid="63961c08-6fa8-47f6-a668-ec51185e31f7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorVirtualAccount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="104">
+			<image>
+				<reportElement x="0" y="0" width="100" height="100" uuid="d461af97-deb1-42d6-a2a0-12acb252551b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+     new com.google.zxing.qrcode.QRCodeWriter().encode(
+         "Nomor Validasi : " +$P{nomorValidasi}+"\nNomor Transaksi : "+$P{nomorTransaksi}+"\nNomor Virtual Account : "+$P{nomorVirtualAccount}+"\nTanggal Transaksi : "+$P{tanggalTransaksi}+"\nNomor Rekening : "+$P{nomorRekening}+"\nNomor KTP : "+$P{noKtp}+"\nNama Calon Haji : "+$P{namaCalonHaji}+"\nNilai Setoran : "+$P{nilaiSetoran}+"\nTerbilang : "+$P{terbilang}, com.google.zxing.BarcodeFormat.QR_CODE, 300, 300))]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

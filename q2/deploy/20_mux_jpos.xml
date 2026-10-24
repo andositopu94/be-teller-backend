@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="ist-mux">
+    <in>ist-receive</in>
+    <out>ist-send</out>
+    <ready>ist-channel.ready</ready>
+</mux>

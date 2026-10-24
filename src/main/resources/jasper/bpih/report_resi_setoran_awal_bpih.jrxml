@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_bukti_setoran_pelunasan_bpih" pageWidth="595" pageHeight="420" orientation="Landscape" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1f99aee1-34fd-4714-8026-082858c7c9da">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="tanggalTransaksi" class="java.lang.String"/>
+	<parameter name="kodeBankBPS" class="java.lang.String"/>
+	<parameter name="kodeCabangBPS" class="java.lang.String"/>
+	<parameter name="nomorTransaksi" class="java.lang.String"/>
+	<parameter name="channel" class="java.lang.String"/>
+	<parameter name="jamTransaksi" class="java.lang.String"/>
+	<parameter name="nomorTerminal" class="java.lang.String"/>
+	<parameter name="nomorRekening" class="java.lang.String"/>
+	<parameter name="namaRekening" class="java.lang.String"/>
+	<parameter name="kodeMataUang" class="java.lang.String"/>
+	<parameter name="nomorValidasi" class="java.lang.String"/>
+	<parameter name="namaCalonHaji" class="java.lang.String"/>
+	<parameter name="nilaiSetoran" class="java.math.BigDecimal"/>
+	<parameter name="terbilang" class="java.lang.String"/>
+	<parameter name="message" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30" uuid="07232e28-5383-45a0-8c68-2a1e54ff4cd2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUKTI PENERIMAAN SETORAN AWAL BIAYA PENYELENGGARAAN IBADAH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="235" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="0258b9eb-413a-472d-93c0-f924d047b5d1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="01a9c734-7313-4272-9013-2d1e327c9fe8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kode Bank BPS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="8ec9da06-d395-4007-b26f-d3d104c779ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Kode Cabang BPS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="3402992c-c2fa-4b6c-9dda-67f9baa9d6f8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No. Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="20" uuid="13895f1c-1140-4af8-a85f-fb5a2371febb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Channel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="80" height="20" uuid="b1a7b34e-f380-48e8-945c-b18a7e7094eb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Jam Transaksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="80" width="80" height="20" uuid="0c1683ae-e0eb-4f4a-baa1-de8bec1326cf"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No. Terminal]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="100" width="555" height="1" uuid="c3191124-cf84-4d4f-91b2-6dc250e8b647"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="110" width="100" height="20" uuid="844958f8-2a11-40ea-b3ae-b10d97e47c7f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No. Rekening]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="100" height="20" uuid="c98b62e6-bacb-44c7-8e1c-55288377b5c0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Rekening]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="100" height="20" uuid="3599d05e-d02a-484e-bbb6-24b4228ad6b5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No. Validasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="170" width="100" height="20" uuid="aee67c69-8000-497e-abcb-e6d11da159e5"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama CALHAJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="100" height="20" uuid="c3acae67-94cc-4b14-b400-e47815937cfc"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nilai Setoran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="100" height="20" uuid="dd53ce52-aeef-43c1-b0e5-953bba700985"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Terbilang]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="180" height="20" uuid="7012da97-81a1-4a5a-9e74-a221c11def69"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tanggalTransaksi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="20" width="180" height="20" uuid="018a0b17-50fb-498b-b37b-7ab02d24d254"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{kodeBankBPS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="40" width="180" height="20" uuid="bc85264d-9948-4c87-a550-4efd809e8258"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{kodeCabangBPS}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="60" width="180" height="20" uuid="99ab9a2a-738c-4321-808e-34ad05a717da"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorTransaksi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="80" width="180" height="20" uuid="c2956b34-39a6-491d-a67c-3b7a8d03d75f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{channel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="80" width="165" height="20" uuid="7f8250d5-8e04-40b1-ada3-0006fe755c49"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorTerminal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="0" width="165" height="20" uuid="45f79003-beac-4f13-acd1-81c3067e9154"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{jamTransaksi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="110" width="180" height="20" uuid="8d30faa5-32cd-4dca-831c-be81def2fcd2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorRekening}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="130" width="180" height="20" uuid="25a524ed-a47b-433a-82ec-8d4fa38ee564"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{namaRekening}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="150" width="180" height="20" uuid="3f92f0fe-577c-439d-9330-c3ca372dd37c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorValidasi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="170" width="180" height="20" uuid="ffadc905-ab96-4206-ab3e-0febd7e95210"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{namaCalonHaji}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="100" y="190" width="180" height="20" uuid="f2f344a8-4dab-4cae-9866-ffc3435e5375"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nilaiSetoran}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="210" width="455" height="20" uuid="b2e94a2b-a5e2-4663-9448-000719b3990e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{terbilang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="555" height="20" uuid="f79929d4-3a10-4b9f-b899-50b29de0e3c8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{message}.toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

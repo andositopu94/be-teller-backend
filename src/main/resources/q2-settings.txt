@@ -1,0 +1,23 @@
+## 10_channel_jpos.xml (ist-channel) ##
+# andrian
+<property name="host" value="192.168.56.102" />
+<property name="port" value="8502" />
+# sumut-dev
+<property name="host" value="192.168.40.20" />
+<property name="port" value="8121" />
+# sumut-prod
+<property name="host" value="192.168.30.20" />
+<property name="port" value="8502" />
+
+## 11_channel_jpos.xml () ##
+# andrian
+<property name="host" value="192.168.56.102" />
+<property name="port" value="10004" />
+# sumut-dev
+<property name="host" value="10.1.4.10" />
+<property name="port" value="10004" />
+# sumut-prod
+<property name="host" value="10.1.4.8" />
+<property name="port" value="10004" />
+
+

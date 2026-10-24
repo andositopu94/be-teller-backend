@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="siskomux">
+    <in>siskochannel-receive</in>
+    <out>siskochannel-send</out>
+    <ready>siskochannel.ready</ready>
+</mux>

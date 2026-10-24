@@ -1,0 +1,207 @@
+{
+  "transaction": "bpihinitialPrint",
+  "pcode": "340000",
+  "errorKey": "bpihinitialPrint",
+  "request": [
+    {
+      "bit": "32",
+      "value": [
+        {
+          "other": "117"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "hajjType",
+          "length": "1",
+          "rightpad": " "
+        },
+        {
+          "key": "transactionDate",
+          "length": "8",
+          "leftpad": "0"
+        },
+        {
+          "key": "validationNumber",
+          "length": "20",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "63",
+      "value": [
+        {
+          "key": "branchCode",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "41",
+      "value": [
+        {
+          "key": "terminalId"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "hajjType",
+          "length": "1",
+          "rightpad": " "
+        },
+        {
+          "key": "transactionDate",
+          "length": "8",
+          "leftpad": "0"
+        },
+        {
+          "key": "validationNumber",
+          "length": "20",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "62",
+      "value": [
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "ktp",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "placeBirth",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "dateBirth",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "postCode",
+          "length": "5",
+          "leftpad": "0"
+        },
+        {
+          "key": "villageName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "districtName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "subdistrictName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "provinceName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "workName",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "educationName",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "gender",
+          "length": "1"
+        },
+        {
+          "key": "ageMonth",
+          "length": "3"
+        },
+        {
+          "key": "ageYear",
+          "length": "2"
+        },
+        {
+          "key": "bankName",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "branchName",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "branchAddress",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "sourceNumber",
+          "length": "19",
+          "rightpad": " "
+        },
+        {
+          "key": "currency",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "nominal",
+          "length": "13",
+          "rightpad": " "
+        },
+        {
+          "key": "virtualAccount",
+          "length": "25",
+          "rightpad": " "
+        }
+      ]
+    }
+  ]
+}

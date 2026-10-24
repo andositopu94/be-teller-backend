@@ -1,0 +1,149 @@
+{
+  "pcode": "380000",
+  "routing": "03111",
+  "errorKey": "sipd",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "idBilling",
+          "length": "21",
+          "rightpad": " "
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "12",
+      "value": [
+        {
+          "key": "date",
+          "length": "10",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "time",
+          "length": "6",
+          "rightpad": " "
+        },
+        {
+          "key": "id",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "amount",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "refId",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "traceID",
+          "length": "6",
+          "leftpad": "0"
+        },
+        {
+          "key": "settlementDate",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "branchCode",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "branch",
+          "length": "50",
+          "leftpad": "0"
+        },
+        {
+          "key": "totalDetail",
+          "length": "2",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "npwp",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "name",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "budgetCode",
+          "length": "6",
+          "rightpad": " "
+        },
+        {
+          "key": "depositType",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "taxPeriod",
+          "length": "8",
+          "leftpad": "0"
+        },
+        {
+          "key": "assessmentID",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "objectID",
+          "length": "18",
+          "leftpad": "0"
+        },
+        {
+          "key": "ntpn",
+          "length": "16",
+          "leftpad": "0"
+        }
+      ]
+    }
+  ]
+}

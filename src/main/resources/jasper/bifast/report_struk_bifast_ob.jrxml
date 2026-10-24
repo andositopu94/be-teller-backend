@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2024-09-11T14:48:48 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_pembayarna_tagihan_listrik" pageWidth="595" pageHeight="420" orientation="Landscape" columnWidth="515" leftMargin="60" rightMargin="20" topMargin="50" bottomMargin="10" uuid="88e52fe1-5be2-4639-9d26-ec832ab1b840">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="ref" class="java.lang.String"/>
+	<parameter name="transactionDate" class="java.lang.String"/>
+	<parameter name="branchCode" class="java.lang.String"/>
+	<parameter name="branchName" class="java.lang.String"/>
+	<parameter name="prvtBicCodeSource" class="java.lang.String"/>
+	<parameter name="prvtBicCodeDestination" class="java.lang.String"/>
+	<parameter name="destinationNumber" class="java.lang.String"/>
+	<parameter name="transferPurposeLocal" class="java.lang.String"/>
+	<parameter name="prvtTransactionNote" class="java.lang.String"/>
+	<parameter name="prvtSourceNumber" class="java.lang.String"/>
+	<parameter name="prvtSourceName" class="java.lang.String"/>
+	<parameter name="totalBill" class="java.lang.String"/>
+	<parameter name="adminCharge" class="java.lang.String"/>
+	<parameter name="totalAmount" class="java.lang.String"/>
+	<parameter name="currencyLocal" class="java.lang.String"/>
+	<parameter name="destinationName" class="java.lang.String"/>
+	<parameter name="terbilang" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="30" uuid="d404bbb7-1d70-436e-9c7c-3dcd3c659501"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. Bank SUMUT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="380" height="20" uuid="fbc5688f-fe0a-4b0c-874d-e8298a5a1e4d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STRUK PEMBAYARAN BIFAST]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="280" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="6dae001b-d6d4-4373-ac30-2c5f1e13efb7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[No Referensi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="f8b1ac71-ec4f-4a42-8430-6632a005a3dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Kode Cabang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="20" uuid="f50e69ba-efb8-4041-bd46-4e0d1eeb1857"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Bank Sumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="12b62180-96f0-4cad-9825-0870ec5cb542"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Nama Cabang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="181" width="100" height="20" uuid="39e23bba-26c0-4af8-b9b1-6cf8225fba46"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Terbilang]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="140" height="20" uuid="6101d7e6-10af-41d3-8de2-cd9c9f1b351d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ref}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="40" width="150" height="20" uuid="f89bb9d4-216a-45b3-8f7b-07a8beef2312"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{branchName}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
+				<reportElement x="100" y="60" width="140" height="20" uuid="adb5604b-8903-4a8c-8d68-ac1bf5ef17c7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{branchCode}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
+				<reportElement x="100" y="80" width="140" height="20" uuid="5192d6da-6e01-40a9-96f7-ce495d0874ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{prvtBicCodeSource}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="181" width="412" height="39" uuid="92f61948-a0d8-4d7e-bbbc-e7a1a7277bf2"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{terbilang}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="18d587f6-bd8a-402c-a859-808f7a4237aa"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="20" width="140" height="20" uuid="abf2dcea-a8fa-40fa-90b0-b8d875f7813f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{transactionDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="220" width="512" height="14" uuid="b1f69b69-4152-48fa-837e-d9ba47cbb8fb"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[BUKTI PEMBAYARAN INI ADALAH BUKTI TRANSAKSI YANG SAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="100" height="20" uuid="7a680c69-893c-4510-b143-f29d2711d67d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Bank Tujuan]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
+				<reportElement x="100" y="100" width="140" height="20" uuid="698d6bee-c9cb-463f-9fe2-a7d3c13b41a4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{prvtBicCodeDestination}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="20" width="90" height="20" uuid="913b8bb5-d4be-4f26-92f0-0933bf2ddfd0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Nama Penerima]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="20" width="130" height="20" uuid="bab420f2-60db-4ec2-b386-ed2425668932"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{destinationName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="60" width="90" height="20" uuid="92e0b819-15f3-4685-9e2e-a7eb28914f3c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Keterangan Transaksi]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement key="" x="370" y="60" width="140" height="40" uuid="2ab510c3-bd57-4460-899a-49dad403da1d"/>
+				<textElement textAlignment="Right" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{prvtTransactionNote}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="0" width="90" height="20" uuid="7552628a-509c-4f3f-a44d-85b61eb74704"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rekening Tujuan]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="0" width="130" height="20" uuid="e47017ca-2b93-4fde-b026-fa2df7fba820"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{destinationNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="120" width="90" height="20" uuid="5d44874c-519c-4c27-8b21-75f185085c38"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Biaya Admin]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="120" width="130" height="20" uuid="3624136d-5642-45c3-88d2-ab942000d56a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{adminCharge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="100" width="90" height="20" uuid="dbf04cfb-b55d-4e72-83a4-c91b13282c90"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Nominal Transfer]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="100" width="130" height="20" uuid="3622b6a4-b496-4d79-afc5-ea1dce22e127"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{totalBill}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="140" width="90" height="20" uuid="245a6a8a-66b5-4995-8da4-2eb946e27d60"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Total Bayar]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="140" width="130" height="20" uuid="3a3316ed-741e-456b-a24e-501ed40e497d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{totalAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="160" width="90" height="20" uuid="2c4fdce0-a75c-474a-badf-84fdea3e6106"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Currency]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="160" width="130" height="20" uuid="73023698-7129-4ca2-b265-05d1543b3854"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{currencyLocal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="40" width="90" height="20" uuid="814f078c-7681-481c-90fc-5e06bd9770ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Tujuan Transaksi]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="40" width="130" height="20" uuid="ff8da37b-beba-4074-ab7e-b4603f3b3730"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{transferPurposeLocal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="120" width="100" height="20" uuid="78c0c256-b76b-437d-881f-27ed02d64809"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rekening Pengirim]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
+				<reportElement x="100" y="120" width="140" height="20" uuid="fc10cd93-26e7-45df-82c6-4bf0acc77076"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{prvtSourceNumber}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
+				<reportElement x="100" y="140" width="140" height="20" uuid="8ff050df-1b78-4304-989d-74f6d84944ca"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{prvtSourceName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="140" width="100" height="20" uuid="c2495212-4565-4922-b131-e63a56ed4518"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Nama Pengirim]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

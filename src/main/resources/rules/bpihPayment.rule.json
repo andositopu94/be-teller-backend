@@ -1,0 +1,377 @@
+{
+  "pcode": "322000",
+  "errorKey": "bpihpayment",
+  "request": [
+    {
+      "bit": "2",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "13",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "32",
+      "value": [
+        {
+          "other": "117",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "porsiNumber",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "embartion",
+          "length": "3"
+        },
+        {
+          "key": "currency",
+          "length": "3"
+        },
+        {
+          "key": "initialDeposit",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "bpihNominal",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "kurs",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "bpihRupiah",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "rest",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "lunasFlag",
+          "length": "1"
+        },
+        {
+          "key": "holdYear",
+          "length": "4"
+        },
+        {
+          "key": "hajjType",
+          "length": "1"
+        },
+        {
+          "key": "pihkCode",
+          "length": "4"
+        },
+        {
+          "key": "pihkName",
+          "length": "35",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "63",
+      "value": [
+        {
+          "key": "branchCode",
+          "length": "6",
+          "leftpad": "0"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "2",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "13",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "41",
+      "value": [
+        {
+          "key": "terminalId",
+          "length": "16",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "porsiNumber",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "embartion",
+          "length": "3"
+        },
+        {
+          "key": "currency",
+          "length": "3"
+        },
+        {
+          "key": "initialDeposit",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "bpihNominal",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "kurs",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "bpihRupiah",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "rest",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "lunasFlag",
+          "length": "1"
+        },
+        {
+          "key": "holdYear",
+          "length": "4"
+        },
+        {
+          "key": "hajjType",
+          "length": "1"
+        },
+        {
+          "key": "pihkCode",
+          "length": "4"
+        },
+        {
+          "key": "pihkName",
+          "length": "35",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "62",
+      "value": [
+        {
+          "key": "jemaahNameSecond",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "gender",
+          "length": "1"
+        },
+        {
+          "key": "parentName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "placeBirth",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "dateBirth",
+          "length": "8"
+        },
+        {
+          "key": "embartionSecond",
+          "length": "3"
+        },
+        {
+          "key": "currency",
+          "length": "3"
+        },
+        {
+          "key": "bpihNominal",
+          "length": "13",
+          "leftpad":"0"
+        },
+        {
+          "key": "bpihRupiah",
+          "length": "13",
+          "leftpad":"0"
+        },
+        {
+          "key": "rest",
+          "length": "13",
+          "leftpad":"0"
+        },
+        {
+          "key": "lunasFlag",
+          "length": "1"
+        },
+        {
+          "key": "holdYear",
+          "length": "4"
+        },
+        {
+          "key": "pelunasanHijriahYear",
+          "length": "4"
+        },
+        {
+          "key": "pihkCode",
+          "length": "4"
+        },
+        {
+          "key": "pihkName",
+          "length": "35",
+          "rightpad":" "
+        },
+        {
+          "key": "pihkAddress",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "villageName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "districtName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "subdistrictName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "provinceName",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "postCode",
+          "length": "5",
+          "leftpad": "0"
+        },
+        {
+          "key": "bankName",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "branchName",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "branchAddress",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "pelunasanYearAge",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "pelunasanMonthAge",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "pelunasanMasehiYear",
+          "length": "4"
+        },
+        {
+          "key": "checksum",
+          "length": "32"
+        }
+      ]
+    }
+  ]
+}

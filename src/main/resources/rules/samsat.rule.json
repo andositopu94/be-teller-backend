@@ -1,0 +1,450 @@
+{
+  "pcode": "500000",
+  "routing": "03010",
+  "errorKey": "samsat",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "58",
+      "value": [
+        {
+          "key": "checkNumber",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "checkPageNumber",
+          "length": "10",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "trxId",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "payCode",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "policeNumber",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "name",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "type",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "merk",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "model",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "color",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "createYear",
+          "length": "4",
+          "rightpad": " "
+        },
+        {
+          "key": "chasisNumber",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "taxPeriod",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "pkbPok",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "pkbDen",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "swdPok",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "swdDen",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "total",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "datiCode",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "machineNumber",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "refferenceNumber",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "progPok",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "progDen",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "beaStnk",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "numberOfPrograms",
+          "length": "1"
+        },
+        {
+          "key": "ownership",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "oldTBPKBDate",
+          "length": "10"
+        },
+		{
+          "key": "newTBPKBDate",
+          "length": "10"
+        },
+        {
+          "key": "wheel",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "cc",
+          "length": "4",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "trxId",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "payCode",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "policeNumber",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "name",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "type",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "merk",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "model",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "color",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "createYear",
+          "length": "4",
+          "rightpad": " "
+        },
+        {
+          "key": "chasisNumber",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "taxPeriod",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "pkbPok",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "pkbDen",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "swdPok",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "swdDen",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "total",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "datiCode",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "machineNumber",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "refferenceNumber",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "progPok",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "progDen",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "beaStnk",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "numberOfPrograms",
+          "length": "1"
+        },
+        {
+          "key": "ownership",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "oldTBPKBDate",
+          "length": "10"
+        },
+		{
+          "key": "newTBPKBDate",
+          "length": "10"
+        },
+        {
+          "key": "wheel",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "cc",
+          "length": "4",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "pcode": "500000",
+  "routing": "07010",
+  "errorKey": "bpjsKerja",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "billNumber",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "date",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "divisi",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "companyName",
+          "length": "100",
+          "rightpad": " "
+        },
+        {
+          "key": "npp",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "billJht",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJkk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJkm",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJpk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJpn",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billBpsjk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billBpjstk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "due",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "totalPayment",
+          "length": "20",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "dataParameter"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "billNumber",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "date",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "divisi",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "companyName",
+          "length": "100",
+          "rightpad": " "
+        },
+        {
+          "key": "npp",
+          "length": "8",
+          "rightpad": " "
+        },
+        {
+          "key": "billJht",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJkk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJkm",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJpk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billJpn",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billBpsjk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "billBpjstk",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "due",
+          "length": "20",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "totalPayment",
+          "length": "20",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

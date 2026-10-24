@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="log-path">log</Property>
+	</Properties>
+	<Appenders>
+
+		<!-- console appender -->
+		<Console name="console-log" target="SYSTEM_OUT">
+			<PatternLayout
+					pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss} [%t] %c{1} - %msg%n" />
+		</Console>
+
+		<!-- file appender -->
+		<RollingFile name="access-log" fileName="${log-path}/access.log"
+					 filePattern="${log-path}/access-%d{yyyy-MM-dd}.log">
+			<!-- log pattern -->
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+
+			<!-- set file size policy -->
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="access-third-log" fileName="${log-path}/access-third.log"
+					 filePattern="${log-path}/access-third-%d{yyyy-MM-dd}.log">
+			<!-- log pattern -->
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+
+			<!-- set file size policy -->
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="iso-log" fileName="${log-path}/iso.log"
+					 filePattern="${log-path}/iso-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="scheduler-log" fileName="${log-path}/scheduler.log"
+					 filePattern="${log-path}/scheduler-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="bpih-upload" fileName="${log-path}/bpih-upload.log"
+					 filePattern="${log-path}/bpih-upload-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="siskohat-log" fileName="${log-path}/siskohat.log"
+					 filePattern="${log-path}/siskohat-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+		<RollingFile name="network-log" fileName="${log-path}/network.log"
+					 filePattern="${log-path}/network-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.multipolar.uiteller" level="debug"
+				additivity="false">
+			<appender-ref ref="console-log" level="debug" />
+		</Logger>
+		<Logger name="access-log" level="debug" additivity="false">
+			<appender-ref ref="access-log" level="debug" />
+		</Logger>
+		<Logger name="access-third-log" level="debug" additivity="false">
+			<appender-ref ref="access-third-log" level="debug" />
+		</Logger>
+		<Logger name="iso-log" level="debug" additivity="false">
+			<appender-ref ref="iso-log" level="debug" />
+		</Logger>
+		<Logger name="scheduler-log" level="debug" additivity="false">
+			<appender-ref ref="scheduler-log" level="debug" />
+		</Logger>
+		<Logger name="bpih-upload" level="debug" additivity="false">
+			<appender-ref ref="bpih-upload" level="debug" />
+		</Logger>
+		<Logger name="siskohat-log" level="debug" additivity="false">
+			<appender-ref ref="siskohat-log" level="debug" />
+		</Logger>
+		<Logger name="network-log" level="debug" additivity="false">
+			<appender-ref ref="network-log" level="debug" />
+		</Logger>
+	</Loggers>
+</Configuration>

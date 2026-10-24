@@ -1,0 +1,15 @@
+image: gradle:jdk7
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: build
+          artifacts:
+            - build/libs/build-0.0.1-SNAPSHOT.jar
+            - build.gradle
+          caches:
+            - gradle
+          script:
+            - gradle clean build
+            - scp -r build/libs/build-0.0.1-SNAPSHOT.jar root@mysql.visiondg.xyz:/var/www/html/file/sumut/teller-backend-0.0.1-SNAPSHOT.jar

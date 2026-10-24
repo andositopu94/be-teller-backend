@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_rekening_koran" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e2937b8e-387b-4906-a7cb-180d1c3196f2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="kodeTransaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[kodeTransaksi]]></fieldDescription>
+	</field>
+	<field name="debetCredit" class="java.lang.String">
+		<fieldDescription><![CDATA[debetCredit]]></fieldDescription>
+	</field>
+	<field name="nomorReferensi" class="java.lang.String">
+		<fieldDescription><![CDATA[nomorReferensi]]></fieldDescription>
+	</field>
+	<field name="tanggalTransaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[tanggalTransaksi]]></fieldDescription>
+	</field>
+	<field name="tanggalValue" class="java.lang.String">
+		<fieldDescription><![CDATA[tanggalValue]]></fieldDescription>
+	</field>
+	<field name="nomimalTransaksi" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[nomimalTransaksi]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="554" height="30" uuid="44b825be-52de-47a4-badc-8bdd3a0c32ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PENDAPATAN BANK SUMUT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

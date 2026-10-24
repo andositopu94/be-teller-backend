@@ -1,0 +1,209 @@
+{
+  "pcode": "380000",
+  "routing": "03014",
+  "errorKey": "inquiryDjp",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "58",
+      "value": [
+        {
+          "key": "checkNumber",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "checkPageNumber",
+          "length": "10",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "billingCode",
+          "length": "15",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "billingCode",
+          "length": "15"
+        },
+        {
+          "key": "taxNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "taxName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "taxAddress",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "account",
+          "length": "6",
+          "rightpad": " "
+        },
+        {
+          "key": "depositCode",
+          "length": "3"
+        },
+        {
+          "key": "taxPeriod",
+          "length": "8"
+        },
+        {
+          "key": "skNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "nop",
+          "length": "18"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "12",
+      "value": [
+        {
+          "key": "transactionTime"
+        }
+      ]
+    }
+  ]
+}

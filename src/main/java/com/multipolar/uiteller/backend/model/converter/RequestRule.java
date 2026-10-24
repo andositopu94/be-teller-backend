@@ -1,0 +1,12 @@
+package com.multipolar.uiteller.backend.model.converter;
+
+import lombok.Data;
+
+@Data
+public class RequestRule {
+	private int bit;
+	private String source;
+	private String rcInclude;
+	private String rcExclude;
+	private ConverterRule[] value;
+}

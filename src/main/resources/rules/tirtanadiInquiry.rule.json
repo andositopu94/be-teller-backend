@@ -1,0 +1,608 @@
+{
+  "pcode": "380000",
+  "routing": "03008",
+  "errorKey": "inquiryTirtanadi",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "15",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "value": [
+        {
+          "key": "transactionFlow",
+          "length": "1"
+        },
+        {
+          "key": "billRepeat",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "rcDesc",
+          "length": "100",
+          "rightpad": " "
+        },
+        {
+          "key": "footerDesc",
+          "length": "250",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "customerAddress",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "groupRate",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "groupRateDescription",
+          "length": "25",
+          "rightpad": " "
+        },
+         {
+          "key": "unit",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "billAmount",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penalties",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmount",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billReport",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoOne",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodOne",
+          "length": "6"
+        },
+        {
+          "key": "billAccountOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountOne",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterOne",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterOne",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationOne",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoTwo",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodTwo",
+          "length": "6"
+        },
+        {
+          "key": "billAccountTwo",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountTwo",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyTwo",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountTwo",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeTwo",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterTwo",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterTwo",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationTwo",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoThree",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodThree",
+          "length": "6"
+        },
+        {
+          "key": "billAccountThree",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountThree",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyThree",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountThree",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeThree",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterThree",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterThree",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationThree",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoFour",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodFour",
+          "length": "6"
+        },
+        {
+          "key": "billAccountFour",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountFour",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyFour",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountFour",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeFour",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterFour",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterFour",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationFour",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoFive",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodFive",
+          "length": "6"
+        },
+        {
+          "key": "billAccountFive",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountFive",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyFive",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountFive",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeFive",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterFive",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterFive",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationFive",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoSix",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodSix",
+          "length": "6"
+        },
+        {
+          "key": "billAccountSix",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountSix",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltySix",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountSix",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeSix",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterSix",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterSix",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationSix",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoSeven",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodSeven",
+          "length": "6"
+        },
+        {
+          "key": "billAccountSeven",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountSeven",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltySeven",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountSeven",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeSeven",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterSeven",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterSeven",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationSeven",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfoEight",
+          "length": "2"
+        },
+        {
+          "key": "billPeriodEight",
+          "length": "6"
+        },
+        {
+          "key": "billAccountEight",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountEight",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyEight",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountEight",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeEight",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterEight",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterEight",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationEight",
+          "length": "11",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

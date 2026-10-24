@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<channel-adaptor name='siskochannel' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="com.multipolar.uiteller.backend.service.iso.Ebcdic"
+             packager="org.jpos.iso.packager.GenericPackager">
+        <property name="packager-config" value="q2/cfg/packager/iso87ebcdic.xml"/>
+        <property name="host" value="127.0.0.1" />
+        <property name="port" value="10004" />
+        <property name="timeout" value="70000" />
+        <property name="keep-alive" value="true" />
+    </channel>
+    <in>siskochannel-send</in>
+    <out>siskochannel-receive</out>
+    <reconnect-delay>1500</reconnect-delay>
+</channel-adaptor>

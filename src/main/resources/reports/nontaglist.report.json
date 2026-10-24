@@ -1,0 +1,249 @@
+{
+  "transaction": "nontaglist",
+  "errorKey": "nonTagList",
+  "report": [
+  	{
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "source": "response",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "request",
+      "rcExclude": "00",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "registrationNumber",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "transactionType",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "billingAmount",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "paymentAmount",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "rcInclude": "00",
+      "value": [
+        {
+          "other": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "transactionType",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "registrationNumber",
+          "length": "13",
+          "rightpad": " "
+        },
+        {
+          "key": "registrationTime",
+          "length": "7",
+          "leftpad": "0"
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "12",
+          "rightpad": " "
+        },
+        {
+          "key": "refferenceNumber",
+          "length": "32",
+          "leftpad": " "
+        },
+        {
+          "key": "billingAmount",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "paymentAmount",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "phoneRayon",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "reservedOne",
+          "length": "32",
+          "rightpad": " "
+        },
+        {
+          "key": "reservedTwo",
+          "length": "32",
+          "rightpad": " "
+        },
+        {
+          "key": "reffNumber",
+          "length": "12",
+          "rightpad": " "
+        },
+        {
+          "key": "errorMessage"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "source": "response",
+      "value": [
+        {
+          "key": "productCode",
+          "length": "6"
+        },
+        {
+          "key": "languange",
+          "length": "1"
+        },
+        {
+          "key": "uniqueNumber",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "date",
+          "length": "8"
+        },
+        {
+          "key": "time",
+          "length": "6"
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "amount",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "billRefferenceOne",
+          "length": "32",
+          "rightpad": " "
+        },
+        {
+          "key": "billRefferenceTwo",
+          "length": "32",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "response",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "62",
+      "source": "response",
+      "value": [
+        {
+          "key": "footer"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "response",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "pcode": "380000",
+  "routing": "03024",
+  "errorKey": "reinquiryDjbc",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "billingCode",
+          "length": "15",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "11",
+      "value": [
+        {
+          "key": "stanOri",
+          "length": "6",
+          "leftpad": "0"
+        }
+      ]
+    },
+        {
+          "bit": "48",
+          "value": [
+            {
+              "key": "stan",
+              "length": "6",
+              "leftpad": "0"
+            }
+          ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "billingCode",
+          "length": "15",
+          "leftpad": " "
+        },
+        {
+          "key": "payCustomerName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "payCustomerId",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "documentType",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "documentNumber",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "documentDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "kppbcCode",
+          "length": "6",
+          "rightpad": " "
+        },
+        {
+          "key": "ntpn",
+          "length": "16"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "12",
+      "value": [
+        {
+          "key": "transactionTime"
+        }
+      ]
+    }
+  ]
+}

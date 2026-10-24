@@ -1,0 +1,143 @@
+{
+  "transaction": "bpjsKerjaBpu",
+  "errorKey": "bpjsKerjaBpu",
+  "report": [
+    {
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "48",
+      "source": "response",
+      "value": [
+        {
+          "key": "dataParameter"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "response",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "nik",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "progMonth",
+          "length": "2",
+          "leftpad": " "
+        },
+        {
+          "key": "kodeIuran",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "fullName",
+          "length": "100",
+          "rightpad": " "
+        },
+        {
+          "key": "branchName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "efectiveDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "expiredDate",
+          "length": "10",
+          "rightpad": " "
+        },
+        {
+          "key": "billJkk",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJkm",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJht",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJpk",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "billJpn",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "totalBill",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "totalAmount",
+          "length": "20",
+          "leftpad": " "
+        },
+        {
+          "key": "bankBranch",
+          "length": "50",
+          "rightpad": " "
+        }
+      ]
+    }
+  ]
+}

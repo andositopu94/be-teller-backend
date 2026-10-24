@@ -1,0 +1,216 @@
+{
+  "pcode": "220000",
+  "errorKey": "bpihCancel",
+  "request": [
+    {
+      "bit": "2",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal"
+        }
+      ]
+    },
+    {
+      "bit": "32",
+      "value": [
+        {
+          "other": "117",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "porsiNumber",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "typeCancel",
+          "length": "1"
+        },
+        {
+          "key": "reasonCancel",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "currency",
+          "length": "3"
+        },
+        {
+          "key": "initialDeposit",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "depositDate",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "branchCodeInitial",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "pelunasanDepositNominal",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "pelunasanDepositDate",
+          "length": "8",
+          "leftpad": "0"
+        },
+        {
+          "key": "branchCodePelunasan",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "cancelNominal",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "operationCancelNominal",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "hajiType",
+          "length": "1"
+        }
+      ]
+    },
+    {
+      "bit": "63",
+      "value": [
+        {
+          "key": "branchCode",
+          "length": "6",
+          "leftpad": "0"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "legth61",
+          "length": "3"
+        },
+        {
+          "key": "porsiNumber",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "typeCancel",
+          "length": "1"
+        },
+        {
+          "key": "reasonCancel",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "jemaahName",
+          "length": "40",
+          "rightpad": " "
+        },
+        {
+          "key": "currency",
+          "length": "3"
+        },
+        {
+          "key": "initialDeposit",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "depositDate",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "branchCodeInitial",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "pelunasanDepositNominal",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "pelunasanDepositDate",
+          "length": "8",
+          "leftpad": "0"
+        },
+        {
+          "key": "branchCodePelunasan",
+          "length": "3",
+          "leftpad": "0"
+        },
+        {
+          "key": "cancelNominal",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "operationCancelNominal",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "hajiType",
+          "length": "1"
+        }
+      ]
+    },
+    {
+      "bit": "62",
+      "value": [
+        {
+          "key": "length62",
+          "length": "3"
+        },
+        {
+          "key": "letterCancelNumber",
+          "length": "20",
+          "rightpad": " "
+        }
+      ]
+    }
+  ]
+}

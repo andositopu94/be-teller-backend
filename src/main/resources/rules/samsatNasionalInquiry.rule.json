@@ -1,0 +1,302 @@
+{
+  "pcode": "380000",
+  "routing": "05012",
+  "errorKey": "inquirySamsatNasional",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "58",
+      "value": [
+        {
+          "key": "checkNumber",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "checkPageNumber",
+          "length": "10",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "payCode",
+          "length": "25",
+          "rightpad": " "
+        },
+		{
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "nik",
+          "length": "16",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    { "bit": "49",
+      "value" : [
+        {"key": "currency", "length":"3"}]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "payCode",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "nik",
+          "length": "16",
+          "rightpad": " "
+        },
+        {
+          "key": "policeNumber",
+          "length": "11",
+          "rightpad": " "
+        },
+		{
+          "key": "oldTBPKBDate",
+          "length": "8"
+        },
+		{
+          "key": "newTBPKBDate",
+          "length": "8"
+        },
+		{
+          "key": "STNKEndDate",
+          "length": "8"
+        },
+		{
+          "key": "pkbPok",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "pkbDen",
+          "length": "12",
+          "leftpad": "0"
+        },
+		{
+          "key": "swdPok",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "swdDen",
+          "length": "12",
+          "leftpad": "0"
+        },
+		{
+          "key": "pnbpPok",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "pnbpDen",
+          "length": "12",
+          "leftpad": "0"
+        },
+		{
+          "key": "parkir",
+          "length": "12",
+          "leftpad": "0"
+        },
+		{
+          "key": "total",
+          "length": "12",
+          "leftpad": "0"
+        },
+		{
+          "key": "adminFee",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "name",
+          "length": "60",
+          "rightpad": " "
+        },
+		{
+          "key": "merk",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "type",
+          "length": "50",
+          "rightpad": " "
+        },
+		{
+          "key": "jenis",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "model",
+          "length": "30",
+          "rightpad": " "
+        },
+		{
+          "key": "createYear",
+          "length": "4",
+          "rightpad": " "
+        },
+        {
+          "key": "color",
+          "length": "20",
+          "rightpad": " "
+        },
+        {
+          "key": "wheel",
+          "length": "2",
+          "rightpad": " "
+        },
+		{
+          "key": "cc",
+          "length": "5",
+          "leftpad": "0"
+        },
+		{
+          "key": "ownership",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "chasisNumber",
+          "length": "25",
+          "rightpad": " "
+        },
+        {
+          "key": "additionalInfo1",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "additionalInfo2",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "additionalInfo3",
+          "length": "50",
+          "rightpad": " "
+        },
+		{
+          "key": "remark",
+          "length": "50",
+          "rightpad": " "
+        },
+		{
+          "key": "transactionID",
+          "length": "32",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

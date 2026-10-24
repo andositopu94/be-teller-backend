@@ -1,0 +1,112 @@
+{
+  "pcode": "380000",
+  "routing": "01002",
+  "errorKey": "inquiry",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "other": "0",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "other": "360",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": "0"
+        },
+        {
+          "key": "sourceName",
+          "length": "30",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "54",
+      "value": [
+        {
+          "key": "other",
+          "length": "4",
+          "leftpad": "0"
+        },
+        {
+          "key": "currency",
+          "length": "3"
+        },
+        {
+          "key": "creditDebit",
+          "length": "1"
+        },
+        {
+          "key": "balance",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

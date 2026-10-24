@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2024-01-24T10:26:58 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_pembelian_listrik_prabayar" pageWidth="595" pageHeight="420" orientation="Landscape" columnWidth="515" leftMargin="60" rightMargin="20" topMargin="50" bottomMargin="10" uuid="88e52fe1-5be2-4639-9d26-ec832ab1b840">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nomorMeter" class="java.lang.String"/>
+	<parameter name="idPelanggan" class="java.lang.String"/>
+	<parameter name="namaPelanggan" class="java.lang.String"/>
+	<parameter name="tarifDaya" class="java.lang.String"/>
+	<parameter name="nomorRef" class="java.lang.String"/>
+	<parameter name="rupiahBayar" class="java.math.BigDecimal"/>
+	<parameter name="ppj" class="java.lang.String"/>
+	<parameter name="ppn" class="java.lang.String"/>
+	<parameter name="materai" class="java.lang.String"/>
+	<parameter name="jmlKwh" class="java.lang.String"/>
+	<parameter name="tanggal" class="java.util.Date"/>
+	<parameter name="token" class="java.lang.String"/>
+	<parameter name="angsuran" class="java.lang.String"/>
+	<parameter name="rupiahToken" class="java.lang.String"/>
+	<parameter name="adminBank" class="java.math.BigDecimal"/>
+	<parameter name="rekeningBeban" class="java.lang.String"/>
+	<parameter name="footer" class="java.lang.String"/>
+	<parameter name="cu" class="java.lang.String"/>
+	<parameter name="tellerCu" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="101" y="20" width="272" height="20" uuid="fbc5688f-fe0a-4b0c-874d-e8298a5a1e4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STRUK PEMBELIAN LISTRIK PRABAYAR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="230" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="6dae001b-d6d4-4373-ac30-2c5f1e13efb7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[IDPEL		   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="f8b1ac71-ec4f-4a42-8430-6632a005a3dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[TARIF/DAYA	   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="100" height="20" uuid="f50e69ba-efb8-4041-bd46-4e0d1eeb1857"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NOMOR REF   	   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="bbe37291-83a0-494d-a303-8624c9c9a0a9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NO METER                :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="140" height="20" uuid="408e5d2f-979c-4d63-905d-fcbb5b04fff6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorMeter}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="0" width="110" height="20" uuid="82b67ef7-7857-408e-a523-8c06c829420c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[MATERAI		      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="20" width="110" height="20" uuid="fc8dd42e-b158-4310-ac3f-7ef47c55fb68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[PPN		      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="12b62180-96f0-4cad-9825-0870ec5cb542"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NAMA		   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="100" height="20" uuid="d542036a-e452-4e10-9878-d3bebacf38a4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[RP BAYAR	   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="60" width="90" height="20" uuid="c2bfadef-f58d-4764-ab70-e354f608ddb4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[ANGSURAN                      ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="80" width="110" height="20" uuid="f07a0051-6c2a-4e63-ad90-6ca00901a4fd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[RP STROOM / TOKEN :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="120" height="30" uuid="4b1b87fd-b4bf-42c0-bf99-e8ea2095c954"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[STROOM TOKEN           :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="20" width="140" height="20" uuid="6101d7e6-10af-41d3-8de2-cd9c9f1b351d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{idPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="40" width="140" height="20" uuid="f89bb9d4-216a-45b3-8f7b-07a8beef2312"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{namaPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="60" width="100" height="20" uuid="adb5604b-8903-4a8c-8d68-ac1bf5ef17c7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tarifDaya}+" VA"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="80" width="140" height="20" uuid="5192d6da-6e01-40a9-96f7-ce495d0874ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nomorRef}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="100" width="90" height="20" uuid="0b4f52e7-614b-4aea-a7ba-eeb73f6a9df9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[JML KWH	        ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="120" width="100" height="20" uuid="eea8f1f9-ec40-4c3a-86ad-75dc0ea980e8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[ADMIN BANK   	      :]]></text>
+			</staticText>
+			<textField pattern="#,##0.###">
+				<reportElement x="122" y="100" width="118" height="20" uuid="057c0866-9f90-4212-804d-949b86ccb974"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{rupiahBayar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="0" width="110" height="20" uuid="15a0da90-1154-460d-9a3b-6970fe552908"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{materai}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="20" width="110" height="20" uuid="179bd406-f307-42e5-8b19-6ed1627e0382"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppn}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="40" width="110" height="20" uuid="a2349d28-6a7a-4bfa-a63e-994707e2bccf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ppj}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="60" width="110" height="20" uuid="041c0cd4-eb63-49a2-ab0a-39e3a8060814"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{angsuran}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="80" width="110" height="20" uuid="eb4cff24-6007-49ad-9070-d0dd68aaae20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{rupiahToken}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="370" y="100" width="80" height="20" uuid="164ad6f7-eba7-4f0b-b061-d2365ce25dce"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{jmlKwh}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="380" y="120" width="120" height="20" uuid="b5fd4423-287a-422a-85f6-148630c8c929"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{adminBank}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="150" width="358" height="30" uuid="0da52856-6319-48a4-9414-5091c0253669"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{token}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="180" width="380" height="30" uuid="e24a896b-ff5b-4587-8c88-b69fe7f5ab9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{footer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="190" width="70" height="22" uuid="e51ae969-6c2f-4931-92a6-817770f7195b"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{cu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="212" width="70" height="15" uuid="1186cbc5-eb6a-4de3-bbab-1a4b5aa2a407"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{tellerCu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="100" width="20" height="20" uuid="d62e0ac2-eccb-426d-b143-cf9550288486"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="80" width="20" height="20" uuid="cfe14b4f-641b-4ca0-873e-7c8dbe256e72"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="60" width="20" height="20" uuid="ae759035-4949-464c-bf59-306e8ff290cd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="40" width="20" height="20" uuid="80a1ef66-7fb6-48a2-a501-e843c4400fcd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="20" width="20" height="20" uuid="db21f890-ec82-4e25-93d3-0a35508bf7d0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="20" height="20" uuid="5ec79779-38c0-4a3f-b785-d70716cfe2b8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="120" width="20" height="20" uuid="b964d2d4-6cc9-4980-8eee-b7ba195d15b6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="212" width="140" height="14" uuid="bec2414c-bc7e-4d15-bf71-c1591d6c22f3">
+					<printWhenExpression><![CDATA[!$P{rekeningBeban}.equals("-")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rekeningBeban}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="212" width="100" height="14" uuid="79aa90fc-f947-4bd2-85b7-1da5db64d556">
+					<printWhenExpression><![CDATA[!$P{rekeningBeban}.equals("-")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<text><![CDATA[Rekening Beban]]></text>
+			</staticText>
+			<textField pattern="">
+				<reportElement x="250" y="40" width="110" height="20" uuid="977b8117-689f-449f-bf81-6bc5fec9ada0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PBJT-TL                     :"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="340" y="100" width="10" height="20" uuid="4daf8d8e-ecfb-4175-94df-14422d89842c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="60" width="10" height="20" uuid="7d5799b3-1b13-4afd-b626-b74f0f7bd99f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

@@ -1,0 +1,128 @@
+{
+  "transaction": "pstn",
+  "errorKey": "paymentPSTN",
+  "report": [
+    {
+      "bit": "4",
+      "source": "request",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "source": "request",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "request",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "request",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "request",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "areaCode",
+          "length": "4",
+          "leftpad": "0"
+        },
+        {
+          "key": "phoneNumber",
+          "length": "9",
+          "leftpad": "0"
+        },
+        {
+          "key": "divreCode",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "datelCode",
+          "length": "4",
+          "leftpad": "0"
+        },
+        {
+          "key": "billNumber",
+          "length": "1"
+        },
+        {
+          "key": "billReferenceThree",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueThree",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "billReferenceTwo",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueTwo",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "billReferenceOne",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueOne",
+          "length": "12",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "request",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

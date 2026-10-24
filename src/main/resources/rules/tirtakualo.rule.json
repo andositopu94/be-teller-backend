@@ -1,0 +1,306 @@
+{
+  "pcode": "500000",
+  "routing": "03020",
+  "errorKey": "tirtakualo",
+  "request": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "other": "0",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": " ",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "group",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "period",
+          "length": "6"
+        },
+        {
+          "key": "checkDate",
+          "length": "8"
+        },
+        {
+          "key": "meterStart",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "meterEnd",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "price",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "stamp",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "care",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "channelCost",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "trash",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "connectionInstallment",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "connectionMonth",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "connectionRest",
+          "length": "5",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ],
+  "response": [
+    {
+      "bit": "4",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "28",
+      "value": [
+        {
+          "key": "adminCharge",
+          "length": "9",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "value": [
+        {
+          "key": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "address",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "group",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "period",
+          "length": "6"
+        },
+        {
+          "key": "checkDate",
+          "length": "8"
+        },
+        {
+          "key": "meterStart",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "meterEnd",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "price",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "stamp",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "care",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "channelCost",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "trash",
+          "length": "10",
+          "leftpad": " "
+        },
+        {
+          "key": "connectionInstallment",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "connectionMonth",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "connectionRest",
+          "length": "5",
+          "rightpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "transaction": "speedy",
+  "errorKey": "paymentSpeedy",
+  "report": [
+    {
+      "bit": "57",
+      "source": "response",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "value": [
+        {
+          "other": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": "sourceNumberDummy",
+          "length": "14",
+          "leftpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "key": "divreCode",
+          "length": "2"
+        },
+        {
+          "key": "datelCode",
+          "length": "4"
+        },
+        {
+          "key": "billNumber",
+          "length": "1"
+        },
+        {
+          "key": "billReferenceThree",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueThree",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "billReferenceTwo",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueTwo",
+          "length": "12",
+          "leftpad": " "
+        },
+        {
+          "key": "billReferenceOne",
+          "length": "11",
+          "rightpad": " "
+        },
+        {
+          "key": "billValueOne",
+          "length": "12",
+          "leftpad": " "
+        }
+      ]
+    },
+    {
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "request",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+     {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "response",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+CREATE OR REPLACE view V1_PBBSTS_PBBSTS_TRANSACTION 
+AS 
+  (select `o`.NAMA_WP AS 'NAMA WP / NAMA WR',`o`.NO_STS AS 'NO STS',cast(`o`.`TRANSACTION_DATE` as date) AS `TGL BAYAR`,
+cast(`o`.JUMLAH_POKOK as decimal(10,0)) AS `POKOK`,
+cast(`o`.`DENDA` as decimal(10,0)) as 'DENDA',
+cast(`o`.JUMLAH_POKOK + `o`.DENDA  as decimal(10,0)) as `TOTAL`,
+cast(`o`.BIAYA_ADMIN as decimal(10,0)) as 'BIAYA',
+cast(`o`.JUMLAH_POKOK + `o`.DENDA + `o`.BIAYA_ADMIN as decimal(10,0)) as 'JUMLAH',
+`o`.`ARCHIVE_NUMBER` AS `NO ARSIP`,`o`.`USER_ID` AS `USER`,`o`.`BRANCH_CODE` AS `BRANCH_CODE`,'TELLER' AS `CHANNEL`,`o`.`STATUS_LOG` AS `STATUS_LOG`,`o`.`TRANSACTION_DATE` AS `TRANSACTION_DATE` 
+from PBB_STS_TRANSACTION_DETAIL `o`) 

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2024-08-26T07:34:46 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_pembayarna_tagihan_listrik" pageWidth="595" pageHeight="420" orientation="Landscape" columnWidth="515" leftMargin="60" rightMargin="20" topMargin="50" bottomMargin="10" uuid="88e52fe1-5be2-4639-9d26-ec832ab1b840">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="stanMeter" class="java.lang.String"/>
+	<parameter name="bulanTahun" class="java.lang.String"/>
+	<parameter name="nama" class="java.lang.String"/>
+	<parameter name="idPelanggan" class="java.lang.String"/>
+	<parameter name="biayaPln" class="java.math.BigDecimal"/>
+	<parameter name="noRef" class="java.lang.String"/>
+	<parameter name="biayaAdminBank" class="java.math.BigDecimal"/>
+	<parameter name="tarifDaya" class="java.lang.String"/>
+	<parameter name="sisaTunggakan" class="java.lang.String"/>
+	<parameter name="footer" class="java.lang.String"/>
+	<parameter name="tanggal" class="java.util.Date"/>
+	<parameter name="rekeningBeban" class="java.lang.String"/>
+	<parameter name="cu" class="java.lang.String"/>
+	<parameter name="tellerCu" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="-38" y="-28" width="550" height="40" uuid="d404bbb7-1d70-436e-9c7c-3dcd3c659501"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[STRUK PEMBAYARAN TAGIHAN LISTRIK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="239" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="6dae001b-d6d4-4373-ac30-2c5f1e13efb7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NAMA		      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="f8b1ac71-ec4f-4a42-8430-6632a005a3dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[RP TAG PLN	      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="100" height="20" uuid="f50e69ba-efb8-4041-bd46-4e0d1eeb1857"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NO REF		      :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="110" width="104" height="20" uuid="0bb8e24b-f816-4421-ab04-eadbf60bba28"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[ADMIN BANK              :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="104" height="20" uuid="4bb5ae03-c832-42eb-86bb-43e2713bf12f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[TOTAL BAYAR           :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-38" y="164" width="550" height="19" uuid="6d9b3dfe-98c1-4b8c-ab35-5b514f79808b">
+					<printWhenExpression><![CDATA[$P{sisaTunggakan}.equals("00")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terima Kasih]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="-20" width="100" height="20" uuid="bbe37291-83a0-494d-a303-8624c9c9a0a9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[IDPEL		      :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="170" height="20" uuid="a2d3c1f6-5849-4dd4-9b31-a5e0df4ee745"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="-20" width="160" height="20" uuid="408e5d2f-979c-4d63-905d-fcbb5b04fff6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{idPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="120" y="40" width="120" height="20" uuid="d13bda1c-5591-4ccb-b0e6-64c291d11741"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{biayaPln}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="60" width="240" height="20" uuid="0b273a65-82e2-4cb1-9d00-d2d8ed1bb95c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{noRef}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="120" y="110" width="100" height="20" uuid="2ac86fe1-8a86-4da1-a5f0-b46a501ca5bf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{biayaAdminBank}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement x="120" y="130" width="100" height="20" uuid="84a13856-a0cb-4ca6-83fe-28a7e1456dab"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{biayaPln}.add($P{biayaAdminBank} )]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="270" y="-20" width="70" height="20" uuid="82b67ef7-7857-408e-a523-8c06c829420c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[BL/TH	         :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="70" height="20" uuid="fc8dd42e-b158-4310-ac3f-7ef47c55fb68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[STAND METER :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="12b62180-96f0-4cad-9825-0870ec5cb542"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[TARIF/DAYA    	      :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="20" width="110" height="20" uuid="612c5b65-662e-451a-89ed-e49c131f8911"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{tarifDaya}+" VA"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="-20" width="172" height="20" uuid="ee23fc40-1f3a-4459-81b9-b7941d99fd16"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{bulanTahun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="172" height="20" uuid="cf8f375b-e054-4e8b-b597-e9fffe0a4623"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{stanMeter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="182" width="512" height="24" uuid="184851df-910e-4cad-a133-3b51ed472da9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{footer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="70" y="150" width="220" height="14" uuid="634287eb-e4a2-4426-b679-6833bb02fc23">
+					<printWhenExpression><![CDATA[!$P{sisaTunggakan}.equals("00")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Anda masih memiliki sisa tunggakan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="150" width="20" height="14" uuid="22fdd3d7-1cee-4ca3-9252-fec1f586840e">
+					<printWhenExpression><![CDATA[!$P{sisaTunggakan}.equals("00")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sisaTunggakan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="150" width="49" height="14" uuid="cca05b67-7188-4c69-a30a-4da45d808a04">
+					<printWhenExpression><![CDATA[!$P{sisaTunggakan}.equals("00")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[bulan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="206" width="82" height="14" uuid="d41da479-da37-40ab-b2f3-f6696980c62d"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{cu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="422" y="223" width="90" height="15" uuid="0ac51df7-e61e-4c92-8b0a-6e4e43152678"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{tellerCu}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="40" width="15" height="20" uuid="2238c1d3-1dba-4351-92d0-aef262754a5d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-40" y="90" width="550" height="19" uuid="4de969e3-a4e8-47c5-bb0b-1562fc9b3a83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLN menyatakan struk ini sebagai bukti pembayaran yang sah.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="227" width="140" height="10" uuid="b12c65ba-5f65-4cdc-a761-1a7386268845">
+					<printWhenExpression><![CDATA[!$P{rekeningBeban}.equals("-")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rekeningBeban}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="227" width="100" height="10" uuid="c3d7a1f0-1337-4992-a24e-2c39a62fb05f">
+					<printWhenExpression><![CDATA[!$P{rekeningBeban}.equals("-")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<text><![CDATA[Rekening Beban]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="110" width="15" height="20" uuid="b16f3d91-0cd1-417c-b691-b9848f83a8f6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="130" width="15" height="20" uuid="f99a6636-9083-4eac-8c86-b30bf6f7e674"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

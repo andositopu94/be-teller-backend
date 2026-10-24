@@ -1,0 +1,591 @@
+# teller-backend
+
+Backend application for Bank Sumut UI Teller
+=======
+
+
+
+1. Clone this repository
+2. import as gradle project from eclipse
+3. run gradle bootrun 
+
+before run, please edit the application.properties file as your mysql configuration.
+for example :
+
+	spring.datasource.url = jdbc:mysql://localhost:3306/sumut?useSSL=false
+	spring.datasource.username = root
+	spring.datasource.password = root
+	
+will use database schema sumut as default database schema (please provide schema if it is doesn't exists).
+while run, application will create 'task' and application_user table in schema provided.
+
+if success, application will open the service in port 8080.
+
+For register user, call this API (use postman or other json client), example:
+
+post http://localhost:8080/api/sign-up with body request {"username": "admin", "password": "password"}
+
+Post
+
+/ownaccount
+{
+	"sourceNumber":"12435",
+	"sourceName":"Suryo",
+	"sourceType":"Tes",
+	"currency":"001",
+	"statusPenduduk":"WNI",
+	"sourceNumber":"54321",
+	"destinationName":"Budi",
+	"phoneNumber":"081914480048",
+	"nominal":"50000",
+	"note":"Note",
+	"adminCharge":"6000"
+}
+/otheraccount
+{
+	"sourceNumber":"12435",
+	"sourceName":"Suryo",
+	"sourceType":"Tes",
+	"currency":"001",
+	"statusPenduduk":"WNI",
+	"sourceNumber":"54321",
+	"destinationName":"Budi",
+	"phoneNumber":"081914480048",
+	"nominal":"50000",
+	"note":"Note",
+	"adminCharge":"6000"
+}
+/otherbank
+{
+	"sourceNumber":"12435",
+	"sourceName":"Suryo",
+	"sourceType":"Tes",
+	"currency":"001",
+	"statusPenduduk":"WNI",
+	"sourceNumber":"54321",
+	"destinationName":"Budi",
+	"phoneNumber":"081914480048",
+	"nominal":"50000",
+	"note":"Note",
+	"adminCharge":"6000",
+	"branchCode":"001"
+}
+/skn
+{
+	"sourceNumber":"12435",
+	"sourceName":"Suryo",
+	"sourceType":"Tes",
+	"currency":"001",
+	"statusPenduduk":"WNI",
+	"sourceNumber":"54321",
+	"destinationName":"Budi",
+	"phoneNumber":"081914480048",
+	"nominal":"50000",
+	"note":"Note",
+	"adminCharge":"6000",
+	"branchCode":"001"
+}
+/rtgs
+{
+	"sourceNumber":"12435",
+	"sourceName":"Suryo",
+	"sourceType":"Tes",
+	"currency":"001",
+	"statusPenduduk":"WNI",
+	"sourceNumber":"54321",
+	"destinationName":"Budi",
+	"phoneNumber":"081914480048",
+	"nominal":"50000",
+	"note":"Note",
+	"adminCharge":"6000",
+	"branchCode":"001"
+}
+/inquiry
+{
+	"sourceNumber":"1234556"
+}
+/code
+{
+	"categoryProperty":"TRANSFER_TYPE",
+	"codeProperty":"IN_HOUSE_TRANSFER_TYPE"
+}
+/mpn
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"billingCode":"87654321",
+	"taxNumber":"1111111",
+	"taxName":"Agus",
+	"taxAddress":"Wonodri",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"depositCode":"001",
+	"spelled":"Lima Puluh Ribu Rupiah",
+	"month":"02",
+	"year":"2018",
+	"taxYear":"2019",
+	"taxObjectNumber":"333333",
+	"provisionNumber":"8888888",
+	"payType":"CASH_PAY_TYPE"
+}
+/mpkd
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"stsCode":"87654321",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE"
+}
+/mpkdcity
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"fine":"7000",
+	"charge":"2000",
+	"spelled":"Lima Puluh Ribu Rupiah",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"bookSerialNumber":"IA",
+	"pageNumber":"20",
+	"depositType":"Premium",
+	"taxPeriod":"2000",
+	"provisionNumber":"20"
+}
+/pdam
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"fine":"7000",
+	"charge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"pdamDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"customerNumber":"12345",
+	"customerName":"Suryo",
+	"customerAddress":"Wonodri",
+	"costClass":"IA",
+	"standMeter":"500",
+	"usage":"50",
+	"period":"3",
+	"feeType":"WITH_FEE_FEE_TYPE",
+	"tag":"5000"
+}
+/pln
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"fine":"7000",
+	"charge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"plnDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"customerNumber":"12345",
+	"customerName":"Suryo",
+	"customerAddress":"Wonodri",
+	"costClass":"IA",
+	"standMeter":"500",
+	"usage":"50",
+	"period":"3",
+	"feeType":"WITH_FEE_FEE_TYPE",
+	"tag":"5000"
+}
+/postpaidProvider
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"productCode":"001",
+	"phoneNumber":"081914480048"
+}
+/ticketing
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"companyTicketingCode":"001",
+	"identityNumber":"12345",
+	"name":"Suryo",
+	"description":"Test"
+}
+/samsat
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"identityNumber":"12345",
+	"name":"Suryo",
+	"billingCode":"A1A3",
+	"policeNumber":"H121H",
+	"address":"Wonodri Baru",
+	"type":"Premium",
+	"productionYear":"2018",
+	"machineCode":"A56UI",
+	"chassisNumber":"56625",
+	"taxPeriod":"2018",
+	"principalPkb":"100000",
+	"finePkb":"50000",
+	"principalProgresif":"400000",
+	"fineProgresif":"10000",
+	"principalSwdkllj":"30000",
+	"fineSwdkllj":"20000",
+	"stnkPnbp":"7000",
+	"description":"Tes"
+}
+/siskoinit
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"identityNumber":"12345",
+	"name":"Suryo",
+	"birthPlace":"Kudus",
+	"birthDate":"01032018",
+	"address":"Wonodri",
+	"gender":"MALE_GENDER_STATUS",
+	"postalCode":"50242",
+	"villageCode":"001",
+	"work":"Developer",
+	"education":"BACHELOR_EDUCATION_STATUS",
+	"maritalStatus":"SINGLE_MARITAL_STATUS"
+}
+/siskoinit
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"identityNumber":"12345",
+	"name":"Suryo",
+	"birthPlace":"Kudus",
+	"birthDate":"01032018",
+	"address":"Wonodri",
+	"gender":"MALE_GENDER_STATUS",
+	"postalCode":"50242",
+	"villageCode":"001",
+	"work":"Developer",
+	"education":"BACHELOR_EDUCATION_STATUS",
+	"maritalStatus":"SINGLE_MARITAL_STATUS"
+}
+/siskoacq
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"postNumber":"50242",
+	"hajjType":"SUPER_HAJJ_TYPE",
+	"embarkation":"embarkation",
+	"pihkCode":"09876",
+	"travelName":"Trans Karawaci",
+	"hold":"YES_HOLD_TYPE"
+	
+}
+/postpaid
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"providerCode":"001",
+	"phoneNumber":"081914480048"
+}
+/channel
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"channelProviderCode":"001",
+	"customerId":"123456",
+	"customerName":"Suryo",
+	"customerAddress":"Wonodri Baru Raya"
+}
+/token
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"productCode":"001",
+	"customerId":"123456789",
+	"customerName":"Suryo Mulyawan Raharjo",
+	"customerAddress":"Wonodri Baru",
+	"meterNumber":"09080706"
+}
+/history
+{
+	"sourceNumber":"12345"
+}
+/pbb
+{
+	"transactionDate":"02032018",
+	"sourceNumber":"12345",
+	"sourceName":"Suryo",
+	"currency":"001",
+	"sourceNumber":"54321",
+	"destinationName":"MPN",
+	"nominal":"50000",
+	"adminCharge":"2000",
+	"branchSourceCode":"001",
+	"branchDestinationCode":"001",
+	"payType":"CASH_PAY_TYPE",
+	"stsCode":"11111222222",
+	"nop":"1213141451",
+	"taxName":"Suryo Mulyawan R",
+	"taxAddress":"Wonodri Baru Raya",
+	"taxPeriod":"2017",
+	"taxType":"COMPANY_TAX_TYPE",
+	"endorsementCode":"11111"
+}
+
+Get
+
+/branch
+/branch/code/001
+/property
+/property/property/001
+/category
+/category/TRANSFER_TYPE
+/code
+/currency
+/currency/code
+/deposit
+/deposit/code/001
+
+
+
+*********************************************************************************************************
+
+
+/inquiry
+{
+	"sourceNumber":"11702040069291"
+}
+
+/inquirytrf
+{
+	"sourceNumber":"11702040069291",
+	"sourceName":"Suryo Mulyawan R",
+	"sourceNumber":"28002040155779",
+	"destinationName":"NURLELA URISKA HASUGIAN",
+	"nominal":"50000",
+	"currency":"360"
+}
+/otheraccount
+{
+	"sourceNumber":"11702040069291",
+	"sourceName":"SIEPD",
+	"sourceType":"Tes",
+	"currency":"360",
+	"statusPenduduk":"WNI",
+	"sourceNumber":"28002040155779",
+	"destinationName":"NURLELA URISKA HASUGIAN",
+	"phoneNumber":"081914480048",
+	"nominal":"50000",
+	"note":"Note",
+	"adminCharge":"6000",
+	"id":"1"
+}
+/history
+{
+	"sourceNumber":"11702040069291",
+	"sourceName":"Suryo"
+}
+/inquirypdam
+{
+	"sourceNumber":"11702040069291",
+	"customerId":"12345678901",
+	"pdamId":"001",
+	"currency":"360"
+}
+
+/pdam
+{
+	"transactionDate":"01021993",
+	"currency":"360",
+	"sourceNumber":"11702040069291",
+	"pdamDestinationCode":"001",
+	"customerId":"12345678901",
+	"customerName":"M OKY SETIAWAN ST MSI/PEGAWAI",
+	"customerAddress":"PUSKESMAS II Gg ABADI NO.144",
+	"groupRate":"RT.2",
+	"billReport":"1",
+	"billInfo":"1",
+	"billPeriod":"201803",
+	"billAccount":"0",
+	"billAmount":"123300.00",
+	"penalties":"0",
+	"nominal":"123300",
+	"cubication":"1779000-00042000",
+	"transactionId":"1",
+	"payType":"CASH_PAY_TYPE",
+	"feeType":"WITH_FEE_FEE_TYPE"
+}
+
+/inquiryprovider
+{
+	"phoneNumber":"081282767997",
+	"sourceNumber":"11702040069291",
+	"currency":"360",
+	"productCode":"001"
+}
+
+/provider
+{
+	"transactionDate":"02022017",
+	"phoneNumber":"081282767997",
+	"sourceNumber":"11702040069291",
+	"currency":"360",
+	"productCode":"001",
+	"code":"",
+	"bill":"",
+	"pulse":"",
+	"payType":"",
+	"nominal":"",
+	"id":""
+}
+
+/inquirypostpaid
+{
+	"phoneNumber":"081282767997",
+	"sourceNumber":"11702040069291",
+	"currency":"360",
+	"postpaidProviderCode":"001"
+}
+
+/postpaid
+{
+	"transactionDate":"02022017",
+	"sourceNumber":"11702040069291",
+	"phoneNumber":"081282767997",
+	"codePostpaid":"001",
+	"currency":"360",
+	"bill":"1",
+	"billRefference":"1",
+	"billValue":"1000",
+	"customerName":"",
+	"currency":"001",
+	"providerCode":"001",
+	"payType":"",
+	"nominal":"",
+	"inquiryId":""	
+}
+/inquirysamsat
+/samsat
+/inquirypospaidtelkom
+/postpaidtelkom
+/inquirypostpaidhalo
+/postpaidhalo
+
+Get
+
+products/code/001
+products/
+providers/code/001
+providers/
+postpaidproviders/
+postpaidproviders/code/001
+telkomproviders/
+telkomproviders/code/001
+products/providercode/002
+pdam/
+pdam/code/001

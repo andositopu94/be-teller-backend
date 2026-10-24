@@ -1,0 +1,165 @@
+{
+  "transaction": "tirtatanjungDtiInstallation",
+  "errorKey": "tirtatanjungDtiInstallation",
+  "report": [
+    {
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "57",
+      "source": "response",
+      "value": [
+        {
+          "key": "payType"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "value": [
+        {
+          "other": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "customerId",
+          "length": "15",
+          "rightpad": " "
+        },
+        {
+          "key": "customerName",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "customerAddress",
+          "length": "30",
+          "rightpad": " "
+        },
+        {
+          "key": "groupRate",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "groupRateDescription",
+          "length": "25",
+          "rightpad": " "
+        },
+         {
+          "key": "unit",
+          "length": "5",
+          "rightpad": " "
+        },
+        {
+          "key": "billInstallation",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penalties",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmount",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFee",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billReport",
+          "length": "2",
+          "leftpad": "0"
+        },
+        {
+          "key": "billInfo",
+          "length": "2"
+        },        
+        {
+          "key": "billPeriod",
+          "length": "6"
+        },
+        {
+          "key": "billAccount",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "billAmountOne",
+          "length": "12",
+          "leftpad": "0"
+        },
+        {
+          "key": "penaltyOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "additionalAmountOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "adminFeeOne",
+          "length": "10",
+          "leftpad": "0"
+        },
+        {
+          "key": "startMeterOne",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "endMeterOne",
+          "length": "11",
+          "leftpad": "0"
+        },
+        {
+          "key": "cubicationOne",
+          "length": "11",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "response",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    }
+  ]
+}

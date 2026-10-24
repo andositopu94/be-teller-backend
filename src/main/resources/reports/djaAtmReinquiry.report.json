@@ -1,0 +1,103 @@
+{
+  "transaction": "djaReinquiry",
+  "errorKey": "dja",
+  "report": [
+    {
+      "bit": "4",
+      "source": "response",
+      "value": [
+        {
+          "key": "nominal",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "49",
+      "source": "response",
+      "value": [
+        {
+          "key": "currency",
+          "length": "3",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "37",
+      "source": "response",
+      "value": [
+        {
+          "key": "ref",
+          "length": "12",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "61",
+      "source": "response",
+      "value": [
+        {
+          "other": "phoneDummy",
+          "length": "13",
+          "leftpad": "0"
+        },
+        {
+          "other": "sourceNumberDummy",
+          "length": "14",
+          "rightpad": " "
+        },
+        {
+          "key": "billingCode",
+          "length": "15",
+          "leftpad": "0"
+        },
+        {
+          "key": "payCustomerName",
+          "length": "50",
+          "rightpad": " "
+        },
+        {
+          "key": "kl",
+          "length": "3",
+          "rightpad": " "
+        },
+        {
+          "key": "echelon",
+          "length": "2",
+          "rightpad": " "
+        },
+        {
+          "key": "satkerCode",
+          "length": "6",
+          "leftpad": "0"
+        },
+        {
+          "key": "ntpn",
+          "length": "16",
+          "leftpad": "0"
+        }
+      ]
+    },
+    {
+      "bit": "102",
+      "source": "response",
+      "value": [
+        {
+          "key": "sourceNumber"
+        }
+      ]
+    },
+    {
+      "bit": "12",
+      "source": "response",
+      "value": [
+        {
+          "key": "transactionTime"
+        }
+      ]
+    }
+  ]
+}
